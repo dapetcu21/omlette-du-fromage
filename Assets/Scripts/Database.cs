@@ -3,8 +3,11 @@ using System.Collections;
 
 
 
-namespace Database  
+static public class Database  
 {
+	static public GameSettings.GameSettings settings;
+
+
 	static public class Gameplay
 	{
 	

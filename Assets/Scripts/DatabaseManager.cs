@@ -3,24 +3,22 @@ using UnityEngine;
 
 
 
-namespace Database
+static public class DatabaseManager
 {
-	public class Manager
+	static private bool _isInitialized = false;
+
+
+	static public
+	void Initialize( GameSettings.GameSettings settings )
 	{
-		static private bool _isInitialized = false;
-
-
-		static public
-		void Initialize()
+		if ( _isInitialized )
 		{
-			if ( _isInitialized )
-			{
-				return;
-			}
-
-			_isInitialized = true;
-
-
+			return;
 		}
+
+		_isInitialized = true;
+
+		Database.settings = settings;
+
 	}
 }
