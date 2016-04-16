@@ -30,12 +30,12 @@ public class RopeController : MonoBehaviour {
 		float slice = (cameraRight - cameraLeft) / (count - 1);
 
 		for (int i = 0; i < count; i++) {
-			_vertices.Add(new Vector2(cameraLeft + slice * i, transform.position.y));
+			_vertices.Add(new Vector2(cameraLeft + slice * i, 0));
 		}
 	}
 
 	void _OnMouseDown () {
-		_grabStart = _gameCamera.ScreenToWorldPoint(Input.mousePosition);
+		_grabStart = transform.InverseTransformPoint(_gameCamera.ScreenToWorldPoint(Input.mousePosition));
 		_grabbing = false;
 
 		int count = _vertices.Count;
@@ -59,7 +59,7 @@ public class RopeController : MonoBehaviour {
 	void _OnMouseMove () {
 		if (!_grabbing) { return; }
 
-		Vector2 dragPoint = _gameCamera.ScreenToWorldPoint(Input.mousePosition);
+		Vector2 dragPoint = transform.InverseTransformPoint(_gameCamera.ScreenToWorldPoint(Input.mousePosition));
 		float deltaY = dragPoint.y - _grabStart.y;
 		_grabStart.y = dragPoint.y;
 
