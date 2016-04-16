@@ -5,22 +5,20 @@ using GameSettings;
 
 public class RopeController : MonoBehaviour {
 	private List<Vector2> _vertices;
+	public GameplayManager manager;
+	public Camera camera;
 
-	public GameSettings.GameSettings gameSettings;
-
-	Camera camera;
 
 	public List<Vector2> GetVertices() { return _vertices; }
 
 	// Use this for initialization
 	void Start () {
-		camera = GetComponent<Camera>();
 		_vertices = new List<Vector2>();
-	
+
 		float cameraLeft = camera.WorldToScreenPoint(new Vector2(camera.rect.xMax, camera.rect.yMax)).x;
 		float cameraRight = camera.WorldToScreenPoint(new Vector2(camera.rect.xMax, camera.rect.yMax)).x;
 
-		int count = gameSettings.ropeVertexCount;
+		int count = manager.gameSettings.ropeVertexCount;
 		float slice = (cameraRight - cameraLeft) / count;
 
 		for (int i = 0; i < i; i++) {

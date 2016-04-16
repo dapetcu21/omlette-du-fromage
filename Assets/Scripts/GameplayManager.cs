@@ -10,14 +10,13 @@ public class GameplayManager : MonoBehaviour
 	void Awake()
 	{
 		instance = this;
-
-		DatabaseManager.Initialize( _gameSettings );
+		DatabaseManager.Initialize(gameSettings);
 	}
 	/************* singleton *************/
 
 
 	[SerializeField]
-	private GameSettings.GameSettings _gameSettings;
+	public GameSettings.GameSettings gameSettings;
 
 
 

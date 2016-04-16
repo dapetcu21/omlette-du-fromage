@@ -215,7 +215,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1acecc264bb1114fa5fb751c1db8257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameSettings: {fileID: 11473782, guid: d65b67556e5fae64f8b40f874729fe34, type: 2}
+  gameSettings: {fileID: 11473782, guid: d65b67556e5fae64f8b40f874729fe34, type: 2}
+--- !u!1 &911283167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 911283168}
+  - 114: {fileID: 911283169}
+  m_Layer: 0
+  m_Name: Rope
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &911283168
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 911283167}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1744390273}
+  m_RootOrder: 0
+--- !u!114 &911283169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 911283167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a853e2a71694b4f3f9228915b0d29258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 852928397}
+  camera: {fileID: 1915547374}
+--- !u!1 &1744390272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1744390273}
+  m_Layer: 0
+  m_Name: RopeContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1744390273
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1744390272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 911283168}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!1 &1915547370
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +334,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_BackGroundColor: {r: 0.42647058, g: 0.42647058, b: 0.42647058, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
