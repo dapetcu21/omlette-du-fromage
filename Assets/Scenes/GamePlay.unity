@@ -255,8 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a853e2a71694b4f3f9228915b0d29258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 852928397}
-  camera: {fileID: 1915547374}
+  gameSettings: {fileID: 0}
 --- !u!1 &1280957732
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +265,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1280957734}
   - 212: {fileID: 1280957733}
+  - 50: {fileID: 1280957735}
+  - 114: {fileID: 1280957736}
+  - 58: {fileID: 1280957737}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -315,6 +317,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!50 &1280957735
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1280957732}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1280957736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1280957732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455e84d8e64410847bce18078a5aac4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 1, y: 0}
+  rb2D: {fileID: 0}
+--- !u!58 &1280957737
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1280957732}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1
 --- !u!1 &1744390272
 GameObject:
   m_ObjectHideFlags: 0
