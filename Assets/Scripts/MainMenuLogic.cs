@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+
 
 public class MainMenuLogic : MonoBehaviour {
 
@@ -30,4 +32,12 @@ public class MainMenuLogic : MonoBehaviour {
             Application.Quit();
         }
     }
+
+
+
+	public
+	void OnClick_Start()
+	{
+		SceneManager.LoadScene( "GamePlay" );
+	}
 }
