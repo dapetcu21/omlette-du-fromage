@@ -5,7 +5,7 @@ using GameSettings;
 
 public class RopeController : MonoBehaviour {
 	private List<Vector2> _vertices;
-	private _dirty;
+	private bool _dirty;
 	public GameplayManager manager;
 	public Camera camera;
 
