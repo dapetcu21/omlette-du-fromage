@@ -8,12 +8,10 @@ public class RopeController : MonoBehaviour {
 	private bool _dirty;
 	public GameSettings.GameSettings gameSettings;
 
-
     Camera gameCamera;
 	bool _lastMouseState = false;
 	Vector2 _grabStart;
 	float _grabDelta;
-
 
 	public List<Vector2> GetVertices() { return _vertices; }
 	public bool GetDirty() { return _dirty; }
@@ -24,11 +22,11 @@ public class RopeController : MonoBehaviour {
 
 		_vertices = new List<Vector2>();
 
-		float cameraLeft = gameCamera.ScreenToWorldPoint(new Vector2(gameCamera.rect.xMax, gameCamera.rect.yMax)).x;
-		float cameraRight = gameCamera.ScreenToWorldPoint(new Vector2(gameCamera.rect.xMax, gameCamera.rect.yMax)).x;
+		float cameraLeft = -gameCamera.orthographicSize * Screen.width / Screen.height;
+		float cameraRight = -cameraLeft;
 
 		int count = gameSettings.ropeVertexCount;
-		float slice = (cameraRight - cameraLeft) / count;
+		float slice = (cameraRight - cameraLeft) / (count - 1);
 
 		for (int i = 0; i < count; i++) {
 			_vertices.Add(new Vector2(cameraLeft + slice * i, 0));
@@ -55,7 +53,6 @@ public class RopeController : MonoBehaviour {
 		}
 
 		_dirty = true;
-		print(_vertices);
 	}
 
 	void _OnMouseUp () {

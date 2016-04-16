@@ -23,10 +23,8 @@ public class RopePhysics : MonoBehaviour {
         newVerticies = ropeController.GetVertices();
         isDirty = ropeController.GetDirty();
 
-        print(newVerticies.Count);
-
         //update list of points
-        if(isDirty)
+        //if(isDirty)
         {
             _UpdateRopeVerticies();
         }
