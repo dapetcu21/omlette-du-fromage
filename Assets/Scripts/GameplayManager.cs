@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameplayManager : MonoBehaviour 
 {
@@ -15,6 +16,7 @@ public class GameplayManager : MonoBehaviour
 
 	public GameSettings.GameSettings gameSettings;
 	public GameObject player;
+    public GameObject winPanel;
 
 	void Start () {
 	}
@@ -24,6 +26,7 @@ public class GameplayManager : MonoBehaviour
 
 	public void Win () {
 		print ("Hey! You just won! Congratulations! Go do something productive with your life now!");
+        winPanel.SetActive(true);
 	}
 
 	public void Lose () {
@@ -32,5 +35,11 @@ public class GameplayManager : MonoBehaviour
 
 	public void NextLevel () {
 		print("Hey! You just advanced to a new level! What about doing something productive?");
+        SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings + 1);
 	}
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }

@@ -7,6 +7,7 @@ public class Finish : MonoBehaviour {
     {
         if(other.CompareTag("Player"))
         {
+            GameplayManager.instance.Win();
             print("You win!");
         }
     }
