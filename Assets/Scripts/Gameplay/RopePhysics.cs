@@ -17,6 +17,8 @@ public class RopePhysics : MonoBehaviour {
         //initialize stuff
         _collider = GetComponent<PolygonCollider2D>();
         ropeController = GetComponent<RopeController>();
+
+       // _UpdateRopeVerticies();
     }
 	
 	void Update ()
@@ -31,11 +33,15 @@ public class RopePhysics : MonoBehaviour {
     private void _UpdateRopeVerticies()
     {
         //replace the points
-        List<Vector2> newVerticies = ropeController.GetVertices();
+        List<Vector2> currentVerticies = ropeController.GetVertices();
+
+        List<Vector2> newVerticies = new List<Vector2>();
 
         float cameraUp = Camera.main.orthographicSize;
         float cameraLeft = cameraUp * Screen.width / Screen.height;
         float cameraRight = -cameraLeft;
+
+        newVerticies.AddRange(currentVerticies);
 
         if (isDown) {
             newVerticies.Add(new Vector2(cameraLeft, -cameraUp));
@@ -45,7 +51,7 @@ public class RopePhysics : MonoBehaviour {
             newVerticies.Add(new Vector2(cameraLeft, cameraUp));
             newVerticies.Add(new Vector2(cameraRight, cameraUp));
         }
-
+    
         _collider.SetPath(0, newVerticies.ToArray());
     }
 }
