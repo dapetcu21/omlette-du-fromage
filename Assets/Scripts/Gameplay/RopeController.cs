@@ -43,11 +43,12 @@ public class RopeController : MonoBehaviour {
 		_grabStart.y = dragPoint.y;
 
 		int count = _vertices.Count;
+		float bumpHorizontalScale = gameSettings.bumpHorizontalScale;
 
 		for (int i = 0; i < count; i++) {
 			Vector2 vertex = _vertices[i];
 			float deltaX = (_grabStart.x - vertex.x);
-			float attenuation = Mathf.Exp(-Mathf.Abs(deltaX));
+			float attenuation = Mathf.Exp(-deltaX * deltaX * bumpHorizontalScale);
 			vertex.y += deltaY * attenuation;
 			_vertices[i] = vertex;
 		}
@@ -58,11 +59,10 @@ public class RopeController : MonoBehaviour {
 	void _OnMouseUp () {
 	}
 
-	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		_dirty = false;
 
-		bool mouseState = Input.GetMouseButtonDown(0);
+		bool mouseState = Input.GetMouseButton(0);
 		if (_lastMouseState != mouseState) {
 			_lastMouseState = mouseState;
 			if (mouseState) {
