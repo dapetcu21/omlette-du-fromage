@@ -275,14 +275,6 @@ Prefab:
       propertyPath: m_Name
       value: TopRope
       objectReference: {fileID: 0}
-    - target: {fileID: 11423462, guid: 05bef181ad572c84da6ab60109dc9b5f, type: 2}
-      propertyPath: isTop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11447478, guid: 05bef181ad572c84da6ab60109dc9b5f, type: 2}
-      propertyPath: isDown
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05bef181ad572c84da6ab60109dc9b5f, type: 2}
   m_IsPrefabParent: 0
