@@ -43,7 +43,7 @@ public class RopeGraphics : MonoBehaviour {
         {
             foreach (Sprite sprite in ropeSprites)
             {
-                Vector2 random = new Vector2(Random.RandomRange(0, 1), Random.RandomRange(0, 1));
+                Vector2 random = new Vector2(Random.RandomRange(0, 1), Random.RandomRange(0, 1)) + transform.position;
                 GameObject newSprite = (GameObject)Instantiate(templateSprite, vertex + random, Quaternion.identity);
                 newSprite.GetComponent<SpriteRenderer>().sprite = sprite;
                 instantiatedSprites.Add(newSprite);
