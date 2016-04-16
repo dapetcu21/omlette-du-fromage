@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using GameSettings;
 
 public class RopeController : MonoBehaviour {
 	private List<Vector2> _vertices;
