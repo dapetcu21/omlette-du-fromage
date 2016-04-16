@@ -30,7 +30,7 @@ public class RopeController : MonoBehaviour {
 		float slice = (cameraRight - cameraLeft) / (count - 1);
 
 		for (int i = 0; i < count; i++) {
-			_vertices.Add(new Vector2(cameraLeft + slice * i, 0));
+			_vertices.Add(new Vector2(cameraLeft + slice * i, transform.position.y));
 		}
 	}
 
