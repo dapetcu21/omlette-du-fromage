@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: 7c8cff209d20a9042bfe5cc1a8faca45
+timeCreated: 1460830061
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CloudSpriteSheet_0
+    21300002: CloudSpriteSheet_1
+    21300004: CloudSpriteSheet_2
+    21300006: CloudSpriteSheet_3
+    21300008: CloudSpriteSheet_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CloudSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: 98}
+        - {x: -112, y: -1}
+        - {x: -117, y: -11}
+        - {x: -113, y: -12}
+        - {x: -102, y: -12}
+        - {x: -140, y: -28}
+        - {x: -146, y: -32}
+        - {x: -146, y: -63}
+        - {x: -132, y: -96}
+        - {x: 118, y: -96}
+        - {x: 118, y: 79}
+        - {x: 76, y: 98}
+      - - {x: 120, y: 50}
+        - {x: 114, y: 34}
+        - {x: 114, y: 21}
+        - {x: 119, y: 15}
+        - {x: 121, y: 14}
+        - {x: 135, y: 14}
+        - {x: 142, y: 19}
+        - {x: 142, y: 41}
+        - {x: 137, y: 50}
+    - name: CloudSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 704
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 141, y: 16}
+        - {x: 141, y: 52}
+        - {x: 139, y: 78}
+        - {x: 90, y: 96}
+        - {x: -18, y: 96}
+        - {x: -101, y: -29}
+        - {x: -101, y: -50}
+        - {x: -14, y: -96}
+        - {x: 86, y: -96}
+        - {x: 140, y: -37}
+        - {x: 112, y: 10}
+        - {x: 109, y: 15}
+        - {x: 120, y: 7}
+    - name: CloudSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 704
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 135, y: 71}
+        - {x: 124, y: 83}
+        - {x: 43, y: 83}
+        - {x: -134, y: 11}
+        - {x: -126, y: -13}
+        - {x: -155, y: -31}
+        - {x: -155, y: -42}
+        - {x: -112, y: -83}
+        - {x: -9, y: -96}
+        - {x: 81, y: -96}
+        - {x: 106, y: -74}
+        - {x: 140, y: -2}
+        - {x: 140, y: 46}
+      - - {x: 35, y: 95}
+        - {x: 25, y: 92}
+        - {x: 21, y: 83}
+        - {x: 21, y: 67}
+        - {x: 25, y: 63}
+        - {x: 40, y: 63}
+        - {x: 50, y: 80}
+        - {x: 50, y: 90}
+        - {x: 48, y: 95}
+    - name: CloudSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 128, y: 83}
+        - {x: 51, y: 83}
+        - {x: -92, y: 13}
+        - {x: -80, y: -10}
+        - {x: -76, y: -11}
+        - {x: -65, y: -11}
+        - {x: -109, y: -20}
+        - {x: -109, y: -46}
+        - {x: -65, y: -96}
+        - {x: 81, y: -96}
+        - {x: 94, y: -92}
+        - {x: 140, y: -13}
+        - {x: 140, y: 51}
+      - - {x: 157, y: -51}
+        - {x: 159, y: -53}
+        - {x: 160, y: -53}
+        - {x: 160, y: -47}
+        - {x: 157, y: -48}
+      - - {x: 31, y: 93}
+        - {x: 24, y: 92}
+        - {x: 21, y: 85}
+        - {x: 21, y: 65}
+        - {x: 25, y: 61}
+        - {x: 40, y: 61}
+        - {x: 49, y: 83}
+        - {x: 50, y: 88}
+        - {x: 47, y: 93}
+    - name: CloudSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 84}
+        - {x: -94, y: -1}
+        - {x: -99, y: -11}
+        - {x: -95, y: -12}
+        - {x: -84, y: -12}
+        - {x: -123, y: -27}
+        - {x: -128, y: -35}
+        - {x: -128, y: -41}
+        - {x: -125, y: -42}
+        - {x: -82, y: -73}
+        - {x: 24, y: -96}
+        - {x: 103, y: -96}
+        - {x: 141, y: -27}
+        - {x: 141, y: 84}
+      - - {x: 36, y: 96}
+        - {x: 26, y: 93}
+        - {x: 22, y: 84}
+        - {x: 22, y: 68}
+        - {x: 26, y: 64}
+        - {x: 41, y: 64}
+        - {x: 51, y: 81}
+        - {x: 51, y: 91}
+        - {x: 49, y: 96}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

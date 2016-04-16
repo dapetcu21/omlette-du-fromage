@@ -19,6 +19,19 @@ public class PlayerController : MonoBehaviour {
 	public void ResetPosition() {
 		_rigidBody.position = initialPosition;
 		_rigidBody.velocity = velocity;
-		_rigidBody.rotation = Mathf.Atan2(velocity.y, velocity.x);
+        Update();
 	}
+
+    void Update()
+    {
+        Vector2 vel = _rigidBody.velocity;
+        float angle = -Mathf.Atan2(vel.x, vel.y) * (180.0f / Mathf.PI) + 90.0f;
+        transform.localRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        transform.localScale = new Vector3(
+                transform.localScale.x,
+                Mathf.Abs(transform.localScale.y) * ((vel.x < 0) ? -1.0f : 1.0f),
+                transform.localScale.z
+            );
+    }
 }
