@@ -4,15 +4,18 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
     public Vector2 velocity;
-    public Rigidbody2D rb2D;
+
+    Rigidbody2D _rigidBody;
 
     void Start()
     {
-        rb2D = GetComponent<Rigidbody2D>();
+        _rigidBody = GetComponent<Rigidbody2D>();
+		_rigidBody.velocity = velocity;
+		_rigidBody.rotation = Mathf.Atan2(velocity.y, velocity.x);
     }
 
     void FixedUpdate()
     {
-        rb2D.MovePosition(rb2D.position + velocity * Time.fixedDeltaTime);
+        //rb2D.MovePosition(rb2D.position + velocity * Time.fixedDeltaTime);
     }
 }
