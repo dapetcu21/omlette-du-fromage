@@ -7,8 +7,6 @@ public class RopeGraphics : MonoBehaviour {
     public GameObject templateSprite;
     public List<Sprite> ropeSprites;
 
-    private List<Vector2> newVerticies = new List<Vector2>();
-    private bool isDirty;
     private List<GameObject> instantiatedSprites;
     private RopeController ropeController;
     
@@ -16,14 +14,13 @@ public class RopeGraphics : MonoBehaviour {
     {
         instantiatedSprites = new List<GameObject>();
         ropeController = GetComponent<RopeController>();
+        
+        UpdateGraphics();
     }
 	
     void Update ()
     {
-        newVerticies = ropeController.GetVertices();
-        isDirty = ropeController.GetDirty();
-
-        if (isDirty)
+        if (ropeController.GetDirty())
         {
             UpdateGraphics();
         }
@@ -39,17 +36,16 @@ public class RopeGraphics : MonoBehaviour {
             instantiatedSprites.RemoveAt(0);
         }
 
+        List<Vector2> newVerticies = ropeController.GetVertices();
         foreach(Vector2 vertex in newVerticies)
         {
             foreach (Sprite sprite in ropeSprites)
             {
-                Vector2 random = new Vector2(Random.RandomRange(0, 1), Random.RandomRange(0, 1));
+                Vector2 random = new Vector2(Random.Range(0.0f, 0.1f), Random.Range(0.0f, 0.1f));
                 GameObject newSprite = (GameObject)Instantiate(templateSprite, vertex + random, Quaternion.identity);
                 newSprite.GetComponent<SpriteRenderer>().sprite = sprite;
                 instantiatedSprites.Add(newSprite);
             }
         }
-
-        isDirty = false;
     }
 }
