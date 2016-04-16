@@ -8,17 +8,15 @@ public class RopePhysics : MonoBehaviour {
 
     private PolygonCollider2D _collider;
 
-    private List<Vector2> newVerticies = new List<Vector2>();
-    private bool isDirty;
     private RopeController ropeController;
 
-    void Awake ()
+    void Start ()
     {
         //initialize stuff
         _collider = GetComponent<PolygonCollider2D>();
         ropeController = GetComponent<RopeController>();
 
-       // _UpdateRopeVerticies();
+        _UpdateRopeVerticies();
     }
 	
 	void Update ()
