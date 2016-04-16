@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: e5c9d72e8b2af304a94118018576bce6
+timeCreated: 1460802519
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - templateSprite: {fileID: 141078, guid: ef22e8b4e13bec64baffa4cd713d33ef, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

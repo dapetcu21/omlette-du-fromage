@@ -6,9 +6,10 @@ using GameSettings;
 public class RopeController : MonoBehaviour {
 	private List<Vector2> _vertices;
 	private bool _dirty;
-	public GameplayManager manager;
-	public Camera gameCamera;
+	public GameSettings.GameSettings gameSettings;
 
+
+    Camera gameCamera;
 	bool _lastMouseState = false;
 	Vector2 _grabStart;
 	float _grabDelta;
@@ -19,12 +20,14 @@ public class RopeController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        gameCamera = Camera.main;
+
 		_vertices = new List<Vector2>();
 
 		float cameraLeft = gameCamera.ScreenToWorldPoint(new Vector2(gameCamera.rect.xMax, gameCamera.rect.yMax)).x;
 		float cameraRight = gameCamera.ScreenToWorldPoint(new Vector2(gameCamera.rect.xMax, gameCamera.rect.yMax)).x;
 
-		int count = manager.gameSettings.ropeVertexCount;
+		int count = gameSettings.ropeVertexCount;
 		float slice = (cameraRight - cameraLeft) / count;
 
 		for (int i = 0; i < count; i++) {
