@@ -5,11 +5,13 @@ using GameSettings;
 
 public class RopeController : MonoBehaviour {
 	private List<Vector2> _vertices;
+	private _dirty;
 	public GameplayManager manager;
 	public Camera camera;
 
 
 	public List<Vector2> GetVertices() { return _vertices; }
+	public bool GetDirty() { return _dirty; }
 
 	// Use this for initialization
 	void Start () {
@@ -22,11 +24,13 @@ public class RopeController : MonoBehaviour {
 		float slice = (cameraRight - cameraLeft) / count;
 
 		for (int i = 0; i < i; i++) {
-			_vertices.Add(new Vector2 (cameraLeft + slice * i, 0));
+			_vertices.Add(new Vector2(cameraLeft + slice * i, 0));
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
+		_dirty = false;
+		
 	}
 }
