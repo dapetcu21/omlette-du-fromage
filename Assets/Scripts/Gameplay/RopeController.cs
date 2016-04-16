@@ -6,23 +6,24 @@ using GameSettings;
 public class RopeController : MonoBehaviour {
 	private List<Vector2> _vertices;
 	private bool _dirty;
-	public GameSettings.GameSettings gameSettings;
 
-    Camera gameCamera;
+	public GameSettings.GameSettings gameSettings;
+	public bool isTop = false;
+
+	Camera _gameCamera;
 	bool _lastMouseState = false;
 	Vector2 _grabStart;
-	float _grabDelta;
+	bool _grabbing;
 
 	public List<Vector2> GetVertices() { return _vertices; }
 	public bool GetDirty() { return _dirty; }
 
 	// Use this for initialization
 	void Start () {
-        gameCamera = Camera.main;
-
+		_gameCamera = Camera.main;
 		_vertices = new List<Vector2>();
 
-		float cameraLeft = -gameCamera.orthographicSize * Screen.width / Screen.height;
+		float cameraLeft = -_gameCamera.orthographicSize * Screen.width / Screen.height;
 		float cameraRight = -cameraLeft;
 
 		int count = gameSettings.ropeVertexCount;
@@ -34,11 +35,31 @@ public class RopeController : MonoBehaviour {
 	}
 
 	void _OnMouseDown () {
-		_grabStart = gameCamera.ScreenToWorldPoint(Input.mousePosition);
+		_grabStart = _gameCamera.ScreenToWorldPoint(Input.mousePosition);
+		_grabbing = false;
+
+		int count = _vertices.Count;
+		float grabX = _grabStart.x;
+		float grabY = _grabStart.y;
+
+		float cameraLeft = -_gameCamera.orthographicSize * Screen.width / Screen.height;
+		float cameraRight = -cameraLeft;
+		float slice = (cameraRight - cameraLeft) / (count - 1);
+		int i = (int)Mathf.Ceil((grabX - cameraLeft) / slice);
+
+		if (i >= 1 && i < count && _vertices[i - 1].x <= grabX && grabX < _vertices[i].x) {
+			float alpha = (grabX - _vertices[i - 1].x) / (_vertices[i].x - _vertices[i - 1].x);
+			float y = _vertices[i - 1].y + alpha * (_vertices[i].y - _vertices[i - 1].y);
+			if (isTop ^ (grabY <= y)) {
+				_grabbing = true;
+			}
+		}
 	}
 
 	void _OnMouseMove () {
-		Vector2 dragPoint = gameCamera.ScreenToWorldPoint(Input.mousePosition);
+		if (!_grabbing) { return; }
+
+		Vector2 dragPoint = _gameCamera.ScreenToWorldPoint(Input.mousePosition);
 		float deltaY = dragPoint.y - _grabStart.y;
 		_grabStart.y = dragPoint.y;
 
