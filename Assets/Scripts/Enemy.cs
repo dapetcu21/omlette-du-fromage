@@ -7,8 +7,7 @@ public class Enemy : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
-            Time.timeScale = 0.00001f;
-            print("You lose!");
+			GameplayManager.instance.Lose();
         }
     }
 }

@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
-
 public class GameplayManager : MonoBehaviour 
 {
 	/************* singleton *************/
@@ -15,32 +13,24 @@ public class GameplayManager : MonoBehaviour
 	/************* singleton *************/
 
 
-	[SerializeField]
 	public GameSettings.GameSettings gameSettings;
+	public GameObject player;
 
-
-
-	void Start()
-	{
-
+	void Start () {
 	}
 
-	void Update()
-	{
-
+	void Update () {
 	}
 
-
-	private
-	void _PrivateFunc()
-	{
-
+	public void Win () {
+		print ("Hey! You just won! Congratulations! Go do something productive with your life now!");
 	}
 
+	public void Lose () {
+		player.GetComponent<PlayerController>().ResetPosition();
+	}
 
-	public
-	void PublicFunc()
-	{
-
+	public void NextLevel () {
+		print("Hey! You just advanced to a new level! What about doing something productive?");
 	}
 }
