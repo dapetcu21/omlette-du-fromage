@@ -1,7 +1,3 @@
-﻿
-using UnityEngine;
-
-
 
 static public class DatabaseManager
 {

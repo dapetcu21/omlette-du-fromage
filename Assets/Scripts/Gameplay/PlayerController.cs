@@ -25,13 +25,22 @@ public class PlayerController : MonoBehaviour {
     void Update()
     {
         Vector2 vel = _rigidBody.velocity;
+
+        Vector3 lastAxis;
+        float lastAngle;
+        transform.localRotation.ToAngleAxis(out lastAngle, out lastAxis);
+        if (lastAxis.z < 0) { lastAngle *= -1; }
+
         float angle = -Mathf.Atan2(vel.x, vel.y) * (180.0f / Mathf.PI) + 90.0f;
-        transform.localRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        angle = lastAngle + MathUtil.AngleShortDiff(angle - lastAngle);
+        float dampenedAngle = MathUtil.LowPassFilter(lastAngle, angle, Time.deltaTime, 3.0f);
+
+        transform.localRotation = Quaternion.AngleAxis(dampenedAngle, Vector3.forward);
 
         transform.localScale = new Vector3(
-                transform.localScale.x,
-                Mathf.Abs(transform.localScale.y) * ((vel.x < 0) ? -1.0f : 1.0f),
-                transform.localScale.z
-            );
+            transform.localScale.x,
+            Mathf.Abs(transform.localScale.y) * ((vel.x < 0) ? -1.0f : 1.0f),
+            transform.localScale.z
+        );
     }
 }
