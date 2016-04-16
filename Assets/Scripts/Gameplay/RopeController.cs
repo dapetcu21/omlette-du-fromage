@@ -38,6 +38,8 @@ public class RopeController : MonoBehaviour {
 		_grabStart = transform.InverseTransformPoint(_gameCamera.ScreenToWorldPoint(Input.mousePosition));
 		_grabbing = false;
 
+		print (_grabStart);
+
 		int count = _vertices.Count;
 		float grabX = _grabStart.x;
 		float grabY = _grabStart.y;
@@ -45,13 +47,17 @@ public class RopeController : MonoBehaviour {
 		float cameraLeft = -_gameCamera.orthographicSize * Screen.width / Screen.height;
 		float cameraRight = -cameraLeft;
 		float slice = (cameraRight - cameraLeft) / (count - 1);
-		int i = (int)Mathf.Ceil((grabX - cameraLeft) / slice);
 
-		if (i >= 1 && i < count && _vertices[i - 1].x <= grabX && grabX < _vertices[i].x) {
-			float alpha = (grabX - _vertices[i - 1].x) / (_vertices[i].x - _vertices[i - 1].x);
-			float y = _vertices[i - 1].y + alpha * (_vertices[i].y - _vertices[i - 1].y);
-			if (isTop ^ (grabY <= y)) {
-				_grabbing = true;
+		for (int i = 1; i < count; i++) {
+			if (_vertices[i - 1].x <= grabX && grabX < _vertices[i].x) {
+				float alpha = (grabX - _vertices[i - 1].x) / (_vertices[i].x - _vertices[i - 1].x);
+				float y = _vertices[i - 1].y + alpha * (_vertices[i].y - _vertices[i - 1].y);
+				print (alpha);
+				print (y);
+				if (isTop ^ (grabY <= y)) {
+					_grabbing = true;
+				}
+				break;
 			}
 		}
 	}
@@ -78,6 +84,7 @@ public class RopeController : MonoBehaviour {
 	}
 
 	void _OnMouseUp () {
+		_grabbing = false;
 	}
 
 	void FixedUpdate () {
