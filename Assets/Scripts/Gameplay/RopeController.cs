@@ -109,7 +109,7 @@ public class RopeController : MonoBehaviour {
 		float deltaY = dragPoint.y - _grabStart.y;
 		_grabStart.y = dragPoint.y;
 
-		BendRope(dragPoint.x, deltaY);
+		BendRope(_grabStart.x, deltaY);
 
 		_dirty = true;
 	}

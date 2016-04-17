@@ -4,25 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuLogic : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-
-	}
-
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKey("escape"))
-            Application.Quit();
-	}
-
-	public
-	void OnClick_Continue()
+	public void OnClick_Continue()
 	{
         SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
 	}
 
-    public
-    void OnClick_Start()
+    public void OnClick_Start()
     {
         //PlayerPrefs.DeleteKey("currentLevel");
         //PlayerPrefs.DeleteKey("firstTimeEnteringGame");
@@ -31,7 +18,8 @@ public class MainMenuLogic : MonoBehaviour {
         {
             PlayerPrefs.SetString("currentLevel", "Tutorial");
         }
-        else {
+        else
+        {
             PlayerPrefs.SetString("currentLevel", "Level01");
         }
 
@@ -40,7 +28,8 @@ public class MainMenuLogic : MonoBehaviour {
             PlayerPrefs.SetInt("firstTimeEnteringGame", 1);
         }
  
-        if(PlayerPrefs.GetInt("firstTimeEnteringGame") == 1) {
+        if(PlayerPrefs.GetInt("firstTimeEnteringGame") == 1)
+        {
             SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
             PlayerPrefs.SetInt("firstTimeEnteringGame", 0);
         }
@@ -51,28 +40,24 @@ public class MainMenuLogic : MonoBehaviour {
         }
     }
 
-    public
-    void OnClick_Quit()
+    public void OnClick_Quit()
     {
         Application.Quit();
     }
 
-    public
-    void OnClick_Credits()
+    public void OnClick_Credits()
     {
         PlayerPrefs.SetString("currentLevel", "Credits");
         SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
     }
 
-    public
-    void OnClick_CreditsBack()
+    public void OnClick_CreditsBack()
     {
         PlayerPrefs.SetString("currentLevel", "MainMenu");
         SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
     }
 
-    public
-    void OnClick_TutorialContinue()
+    public void OnClick_TutorialContinue()
     {
         PlayerPrefs.SetString("currentLevel", "Level01");
         SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
