@@ -56,6 +56,20 @@ public class MainMenuLogic : MonoBehaviour {
     }
 
     public
+    void OnClick_Credits()
+    {
+        GameplayManager.instance.gameSettings.currentLevel = "Credits";
+        SceneManager.LoadScene(GameplayManager.instance.gameSettings.currentLevel);
+    }
+
+    public
+    void OnClick_CreditsBack()
+    {
+        GameplayManager.instance.gameSettings.currentLevel = "MainMenu";
+        SceneManager.LoadScene(GameplayManager.instance.gameSettings.currentLevel);
+    }
+
+    public
     void OnClick_TutorialContinue()
     {
         GameplayManager.instance.gameSettings.currentLevel = "Level01";
