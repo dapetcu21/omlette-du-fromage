@@ -18,21 +18,36 @@ public class MainMenuLogic : MonoBehaviour {
 	public
 	void OnClick_Continue()
 	{
-        SceneManager.LoadScene(GameplayManager.instance.gameSettings.currentLevel);
+        SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
 	}
 
     public
     void OnClick_Start()
     {
-        if(GameplayManager.instance.gameSettings.firstTimeEnteringGame == true) {
-            GameplayManager.instance.gameSettings.currentLevel = "Tutorial";
-            SceneManager.LoadScene(GameplayManager.instance.gameSettings.currentLevel);
-            GameplayManager.instance.gameSettings.firstTimeEnteringGame = false;
+        //PlayerPrefs.DeleteKey("currentLevel");
+        //PlayerPrefs.DeleteKey("firstTimeEnteringGame");
+
+        if (!PlayerPrefs.HasKey("currentLevel"))
+        {
+            PlayerPrefs.SetString("currentLevel", "Tutorial");
+        }
+        else {
+            PlayerPrefs.SetString("currentLevel", "Level01");
+        }
+
+        if (!PlayerPrefs.HasKey("firstTimeEnteringGame"))
+        {
+            PlayerPrefs.SetInt("firstTimeEnteringGame", 1);
+        }
+ 
+        if(PlayerPrefs.GetInt("firstTimeEnteringGame") == 1) {
+            SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
+            PlayerPrefs.SetInt("firstTimeEnteringGame", 0);
         }
         else
         {
-            GameplayManager.instance.gameSettings.currentLevel = "Level01";
-            SceneManager.LoadScene(GameplayManager.instance.gameSettings.currentLevel);
+            PlayerPrefs.SetString("currentLevel", "Level01");
+            SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
         }
     }
 
@@ -43,36 +58,23 @@ public class MainMenuLogic : MonoBehaviour {
     }
 
     public
-    void OnClick_Sounds()
-    {
-        if (AudioListener.volume > 0)
-        {
-            AudioListener.volume = 0;
-        }
-        else
-        {
-            AudioListener.volume = 100;
-        }
-    }
-
-    public
     void OnClick_Credits()
     {
-        GameplayManager.instance.gameSettings.currentLevel = "Credits";
-        SceneManager.LoadScene(GameplayManager.instance.gameSettings.currentLevel);
+        PlayerPrefs.SetString("currentLevel", "Credits");
+        SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
     }
 
     public
     void OnClick_CreditsBack()
     {
-        GameplayManager.instance.gameSettings.currentLevel = "MainMenu";
-        SceneManager.LoadScene(GameplayManager.instance.gameSettings.currentLevel);
+        PlayerPrefs.SetString("currentLevel", "MainMenu");
+        SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
     }
 
     public
     void OnClick_TutorialContinue()
     {
-        GameplayManager.instance.gameSettings.currentLevel = "Level01";
-        SceneManager.LoadScene(GameplayManager.instance.gameSettings.currentLevel);
+        PlayerPrefs.SetString("currentLevel", "Level01");
+        SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
     }
 }

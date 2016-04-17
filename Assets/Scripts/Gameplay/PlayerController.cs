@@ -8,12 +8,13 @@ public class PlayerController : MonoBehaviour {
     Rigidbody2D _rigidBody;
     Animator _animator;
     Vector2 initialPosition;
+    bool _died = false;
 
     void Start()
     {
         GameplayManager.instance.player = gameObject;
         _rigidBody = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>();
+        _animator = GetComponentInChildren<Animator>();
         initialPosition = _rigidBody.position;
 		ResetPosition();
     }
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour {
     public void Die()
     {
         _animator.SetTrigger("death");
+        _died = true;
         _rigidBody.velocity = Vector2.zero;
     }
 
@@ -34,19 +36,22 @@ public class PlayerController : MonoBehaviour {
     {
 		_rigidBody.position = initialPosition;
 		_rigidBody.velocity = velocity;
+        _died = false;
         Update();
     }
 
     public void HitObstacle()
     {
-        Animator animator = GetComponent<Animator>();
+        Animator animator = GetComponentInChildren<Animator>();
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
-            GetComponent<Animator>().SetTrigger("hurt");
+            animator.SetTrigger("hurt");
         }
     }
 
     void Update()
-    {
+        {
+        if (_died) { return; }
+
         Vector2 vel = _rigidBody.velocity;
 
         Vector3 lastAxis;

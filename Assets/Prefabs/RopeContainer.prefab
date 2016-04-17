@@ -117,7 +117,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.87, y: 0, z: -6.1}
+  m_LocalPosition: {x: 7.15, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 418962}
@@ -129,7 +129,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.5, z: 0}
+  m_LocalPosition: {x: 0, y: -3.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 418962}
@@ -141,7 +141,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.5, z: 0}
+  m_LocalPosition: {x: 0, y: 3.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 418962}
@@ -153,7 +153,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.87, y: 0, z: 0}
+  m_LocalPosition: {x: -7.15, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 418962}
@@ -207,9 +207,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -0.0127103925, y: 0.06355381}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.2627802, y: 10.787237}
+  m_Size: {x: 0.3, y: 50}
 --- !u!61 &6145184
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -221,9 +221,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.0127103925, y: 0.06355381}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.2627802, y: 10.787237}
+  m_Size: {x: 0.3, y: 50}
 --- !u!114 &11402898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -288,6 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSettings: {fileID: 11473782, guid: d65b67556e5fae64f8b40f874729fe34, type: 2}
   isTop: 0
+  initialBumps: []
 --- !u!114 &11471410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -351,6 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSettings: {fileID: 11473782, guid: d65b67556e5fae64f8b40f874729fe34, type: 2}
   isTop: 1
+  initialBumps: []
 --- !u!114 &11497514
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -429,8 +431,8 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0.15, y: 5, z: -1}
-  - {x: 0.15, y: -5, z: -1}
+  - {x: 0.15, y: 25, z: -1}
+  - {x: 0.15, y: -25, z: -1}
   m_Parameters:
     startWidth: 0.05
     endWidth: 0.05
@@ -507,8 +509,8 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -0.15, y: 5, z: -1}
-  - {x: -0.15, y: -5, z: -1}
+  - {x: -0.15, y: 25, z: -1}
+  - {x: -0.15, y: -25, z: -1}
   m_Parameters:
     startWidth: 0.05
     endWidth: 0.05
