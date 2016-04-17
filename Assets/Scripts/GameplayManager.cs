@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class GameplayManager : MonoBehaviour 
+public class GameplayManager : MonoBehaviour
 {
 	/************* singleton *************/
 	static public GameplayManager instance { get; private set; }
@@ -41,5 +41,10 @@ public class GameplayManager : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void PlayerHitObstacle()
+    {
+        player.GetComponent<PlayerController>().HitObstacle();
     }
 }

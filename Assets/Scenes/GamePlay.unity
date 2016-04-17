@@ -292,6 +292,7 @@ GameObject:
   - 4: {fileID: 691985174}
   - 61: {fileID: 691985175}
   - 120: {fileID: 691985176}
+  - 114: {fileID: 691985177}
   m_Layer: 0
   m_Name: LeftWall
   m_TagString: Untagged
@@ -364,6 +365,17 @@ LineRenderer:
       serializedVersion: 2
       rgba: 4294967295
   m_UseWorldSpace: 0
+--- !u!114 &691985177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691985173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ed572d9a8df4def8e5af7fff0a2b9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &730765360
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +491,21 @@ MonoBehaviour:
   gameSettings: {fileID: 11473782, guid: d65b67556e5fae64f8b40f874729fe34, type: 2}
   player: {fileID: 0}
   winPanel: {fileID: 1209812623}
+--- !u!1 &856805013 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 158834, guid: e2976be2d6efc9344b69028cbd1de63f, type: 2}
+  m_PrefabInternal: {fileID: 573396096}
+--- !u!114 &856805014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 856805013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ed572d9a8df4def8e5af7fff0a2b9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1209812623 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 134092, guid: 81b0dd3761ef926409f0a4cf8eb89c1a, type: 2}
@@ -703,7 +730,7 @@ Transform:
   - {fileID: 691985174}
   - {fileID: 1749036166}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &1749036165
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,6 +742,7 @@ GameObject:
   - 61: {fileID: 1749036167}
   - 114: {fileID: 1749036168}
   - 120: {fileID: 1749036169}
+  - 114: {fileID: 1749036170}
   m_Layer: 0
   m_Name: RightWall
   m_TagString: Untagged
@@ -729,7 +757,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1749036165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.87, y: 0, z: 0}
+  m_LocalPosition: {x: 8.87, y: 0, z: -6.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1744390273}
@@ -766,13 +794,13 @@ LineRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1749036165}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 492f04e50a50a734b9d498d82149cec6, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
+  m_UseLightProbes: 0
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
@@ -786,8 +814,8 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -0.15, y: 5, z: 2}
-  - {x: -0.15, y: -5, z: 2}
+  - {x: -0.15, y: 5, z: -1}
+  - {x: -0.15, y: -5, z: -1}
   m_Parameters:
     startWidth: 0.05
     endWidth: 0.05
@@ -798,6 +826,17 @@ LineRenderer:
       serializedVersion: 2
       rgba: 4294967295
   m_UseWorldSpace: 0
+--- !u!114 &1749036170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1749036165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ed572d9a8df4def8e5af7fff0a2b9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1772205433
 GameObject:
   m_ObjectHideFlags: 0

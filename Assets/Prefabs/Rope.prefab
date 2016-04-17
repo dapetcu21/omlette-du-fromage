@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11484862}
   - 114: {fileID: 11447478}
   - 120: {fileID: 12081648}
+  - 114: {fileID: 11481108}
   m_Layer: 0
   m_Name: Rope
   m_TagString: Untagged
@@ -76,6 +77,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDown: 0
+--- !u!114 &11481108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ed572d9a8df4def8e5af7fff0a2b9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11484862
 MonoBehaviour:
   m_ObjectHideFlags: 1
