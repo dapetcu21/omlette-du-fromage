@@ -30,6 +30,7 @@ public class GameplayManager : MonoBehaviour
     {
         _isMuted = false;
         _isPaused = false;
+        Time.timeScale = 1.0f;
 	}
 
 	void Update () {
