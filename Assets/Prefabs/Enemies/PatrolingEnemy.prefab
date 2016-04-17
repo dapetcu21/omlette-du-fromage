@@ -11,6 +11,7 @@ GameObject:
   - 58: {fileID: 5821650}
   - 212: {fileID: 21224160}
   - 114: {fileID: 11443050}
+  - 114: {fileID: 11414742}
   m_Layer: 0
   m_Name: PatrolingEnemy
   m_TagString: Untagged
@@ -44,6 +45,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &11414742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85d4786998641cca7fd882903a6bc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolPointA: {x: 0, y: 0}
+  patrolPointB: {x: 0, y: 0}
+  patrolSpeed: 2
 --- !u!114 &11443050
 MonoBehaviour:
   m_ObjectHideFlags: 1

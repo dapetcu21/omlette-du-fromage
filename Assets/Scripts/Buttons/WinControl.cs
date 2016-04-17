@@ -11,11 +11,13 @@ public class WinControl : MonoBehaviour {
 
     public void NextLevel()
     {
+        GetComponent<Animator>().SetTrigger("PopDown");
         GameplayManager.instance.NextLevel();
     }
 
     public void MainMenu()
     {
+        GetComponent<Animator>().SetTrigger("PopDown");
         GameplayManager.instance.MainMenu();
     }
 

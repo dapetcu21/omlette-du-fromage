@@ -126,8 +126,9 @@ public class GameplayManager : MonoBehaviour
     public void NextLevel ()
     {
         int c = SceneManager.GetActiveScene().buildIndex;
-        if (c < SceneManager.sceneCountInBuildSettings)
-            SceneManager.LoadScene(c + 1);
+        if (c < SceneManager.sceneCountInBuildSettings) {
+			SceneTransition.TransitionToScene(c + 1);
+        }
     }
 
     public void MainMenu()
