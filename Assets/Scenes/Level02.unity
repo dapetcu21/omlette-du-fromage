@@ -356,11 +356,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11460130, guid: d8dba9038f2af456cb6193ce13cf522c, type: 2}
       propertyPath: initialBumps.Array.data[0].y
-      value: 3
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 11493746, guid: d8dba9038f2af456cb6193ce13cf522c, type: 2}
       propertyPath: initialBumps.Array.data[0].y
-      value: -3
+      value: -3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8dba9038f2af456cb6193ce13cf522c, type: 2}
@@ -588,6 +588,9 @@ MonoBehaviour:
   player: {fileID: 0}
   winPanel: {fileID: 2013122205}
   pausePanel: {fileID: 421308805}
+  targetTime: 5
+  twoStarsPercent: 130
+  oneStarPercent: 200
 --- !u!114 &852928398
 MonoBehaviour:
   m_ObjectHideFlags: 0
