@@ -17,16 +17,27 @@ public class GameplayManager : MonoBehaviour
 	public GameSettings.GameSettings gameSettings;
 	public GameObject player;
     public GameObject winPanel;
+    public GameObject pausePanel;
+
+    private bool isPaused;
+    private float beforeTimeScale;
 
     List<RopeController> _ropeControllers = new List<RopeController>();
 
     void Start()
     {
+        isPaused = false;
 	}
 
-    void Update()
-    {
-    }
+	void Update () {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused)
+                Resume();
+            else
+                Pause();
+        }
+	}
 
     public void AddRopeController(RopeController rc)
     {
@@ -67,5 +78,20 @@ public class GameplayManager : MonoBehaviour
     public void PlayerHitObstacle()
     {
         player.GetComponent<PlayerController>().HitObstacle();
+    }
+
+    public void Pause()
+    {
+        isPaused = true;
+        beforeTimeScale = Time.timeScale;
+        Time.timeScale = 0.0f;
+        pausePanel.SetActive(true);
+    }
+
+    public void Resume()
+    {
+        isPaused = false;
+        Time.timeScale = beforeTimeScale;
+        pausePanel.SetActive(false);
     }
 }

@@ -5,7 +5,6 @@ public class WinControl : MonoBehaviour {
 
     public void NextLevel()
     {
-        print("You PRESSEEEED ME!");
         GameplayManager.instance.NextLevel();
     }
 
