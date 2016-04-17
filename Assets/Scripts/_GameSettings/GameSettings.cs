@@ -8,6 +8,7 @@ namespace GameSettings
 		public int 		ropeVertexCount;
 		public float	bumpHorizontalScale;
         public string   currentLevel = "GamePlay";
+        public bool     firstTimeEnteringGame = true;
 		public Debug	debug;
 	}
 }
