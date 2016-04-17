@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
@@ -29,17 +30,18 @@ public class GameplayManager : MonoBehaviour
     {
         _isMuted = false;
         _isPaused = false;
+        Time.timeScale = 1.0f;
 	}
 
 	void Update () {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (_isPaused)
                 Resume();
             else
                 Pause();
         }
-	}
+    }
 
     public void AddRopeController(RopeController rc)
     {
@@ -50,7 +52,8 @@ public class GameplayManager : MonoBehaviour
 		print ("Hey! You just won! Congratulations! Go do something productive with your life now!");
         winPanel.SetActive(true);
         winPanel.GetComponent<WinControl>().SetStars(GetStarCount());
-	}
+        winPanel.GetComponent<Animator>().SetTrigger("PopUp");
+    }
 
     public void Lose()
     {
@@ -93,14 +96,14 @@ public class GameplayManager : MonoBehaviour
         _isPaused = true;
         _beforeTimeScale = Time.timeScale;
         Time.timeScale = 0.0f;
-        pausePanel.SetActive(true);
+        pausePanel.GetComponent<PauseControl>().pauseAnim.SetTrigger("PopUp");
     }
 
     public void Resume()
     {
         _isPaused = false;
         Time.timeScale = _beforeTimeScale;
-        pausePanel.SetActive(false);
+        pausePanel.GetComponent<PauseControl>().pauseAnim.SetTrigger("PopDown");
     }
 
     public void Mute()
@@ -124,4 +127,5 @@ public class GameplayManager : MonoBehaviour
     {
         return 3;
     }
+    
 }
