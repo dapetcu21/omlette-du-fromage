@@ -15,29 +15,22 @@ public class MainMenuLogic : MonoBehaviour {
             Application.Quit();
 	}
 
-    void OnApplicationQuit()
-    {
-        Debug.Log("Game ending after " + Time.time + " seconds");
-    }
-
-    void OnGUI()
-    {
-        int boxw = 200, boxh = 200, btnw = 100, btnh = 30, bdist = 5;
-        GUI.Box(new Rect(Screen.width / 2 - (boxw / 2), Screen.height / 2, boxw, boxh), "Game name placeholder");
-        if (GUI.Button(new Rect(Screen.width / 2 - (boxw / 2) + (btnw / 2), Screen.height / 2 + (boxh / 2), btnw, btnh), "Start"))
-        {
-			SceneManager.LoadScene("GamePlay");
-        }
-        if (GUI.Button(new Rect(Screen.width / 2 - (boxw / 2) + (btnw / 2), Screen.height / 2 + (boxh / 2) + btnh + bdist, btnw, btnh), "Exit")) {
-            Application.Quit();
-        }
-    }
-
-
-
 	public
-	void OnClick_Start()
+	void OnClick_Continue()
 	{
-		SceneManager.LoadScene( "GamePlay" );
+        SceneManager.LoadScene(GameplayManager.instance.gameSettings.currentLevel);
 	}
+
+    public
+    void OnClick_Start()
+    {
+        GameplayManager.instance.gameSettings.currentLevel = "GamePlay";
+        SceneManager.LoadScene(GameplayManager.instance.gameSettings.currentLevel);
+    }
+
+    public
+    void OnClick_Quit()
+    {
+        Application.Quit();
+    }
 }
