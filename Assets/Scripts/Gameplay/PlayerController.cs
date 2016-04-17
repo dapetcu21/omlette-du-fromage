@@ -6,14 +6,27 @@ public class PlayerController : MonoBehaviour {
     public Vector2 velocity;
 
     Rigidbody2D _rigidBody;
-	Vector2 initialPosition;
+    Animator _animator;
+    Vector2 initialPosition;
 
     void Start()
     {
-		GameplayManager.instance.player = gameObject;
+        GameplayManager.instance.player = gameObject;
         _rigidBody = GetComponent<Rigidbody2D>();
-		initialPosition = _rigidBody.position;
+        _animator = GetComponent<Animator>();
+        initialPosition = _rigidBody.position;
 		ResetPosition();
+    }
+
+    public void Die()
+    {
+        _animator.SetTrigger("death");
+        _rigidBody.velocity = Vector2.zero;
+    }
+
+    public void DeathAnimationEnd()
+    {
+        _animator.SetTrigger("reset");
     }
 
     public void ResetPosition()
