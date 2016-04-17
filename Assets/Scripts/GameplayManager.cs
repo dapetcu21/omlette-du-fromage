@@ -20,9 +20,8 @@ public class GameplayManager : MonoBehaviour
     public GameObject winPanel;
     public GameObject pausePanel;
 
-    public float targetTime = 5.0f;
-    public float twoStarsPercent = 130;
-    public float oneStarPercent = 200;
+    public float twoStarsTargetTime = 20.0f;
+    public float threeStarsPercent = 80;
 
     private bool _isMuted;
     private bool _isPaused;
@@ -56,7 +55,6 @@ public class GameplayManager : MonoBehaviour
     }
 
     public void Win () {
-		print ("Hey! You just won! Congratulations! Go do something productive with your life now!");
         winPanel.SetActive(true);
         winPanel.GetComponent<WinControl>().SetStars(GetStarCount());
         winPanel.GetComponent<Animator>().SetTrigger("PopUp");
@@ -74,13 +72,11 @@ public class GameplayManager : MonoBehaviour
             rc.userInputEnabled = false;
             rc.AnimateResetBumps();
         }
-
-        //reset start time also
-        startTime = Time.time;
     }
 
     public void DeathAnimationEnd()
     {
+        startTime = Time.time;
         foreach (RopeController rc in _ropeControllers) {
             rc.userInputEnabled = true;
         }
@@ -138,22 +134,11 @@ public class GameplayManager : MonoBehaviour
     public int GetStarCount()
     {
         float playTime = Time.time - startTime;
-        if (playTime < targetTime)
-        {
-            return 3;
-        }
-        else if(playTime < targetTime * twoStarsPercent/100.0f)
-        {
-            return 2;
-        }
-        else if (playTime < targetTime * oneStarPercent/100.0f)
-        {
-            return 1;
-        }
-        else
-        {
-            return 0;
-        }
+        print(playTime);
+        print(twoStarsTargetTime);
+        if (playTime > twoStarsTargetTime) { return 1; }
+        if (playTime <= twoStarsTargetTime * threeStarsPercent / 100.0f) { return 3; }
+        return 2;
     }
-    
+
 }
