@@ -54,6 +54,11 @@ public class GameplayManager : MonoBehaviour
 
     public void Lose()
     {
+		ResetLevel();
+    }
+
+    public void ResetLevel()
+    {
 		player.GetComponent<PlayerController>().Die();
         foreach (RopeController rc in _ropeControllers) {
             rc.userInputEnabled = false;
