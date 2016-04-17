@@ -25,7 +25,10 @@ public class PlayerController : MonoBehaviour {
 
     public void HitObstacle()
     {
-        GetComponent<Animator>().SetTrigger("hurt");
+        Animator animator = GetComponent<Animator>();
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
+            GetComponent<Animator>().SetTrigger("hurt");
+        }
     }
 
     void Update()
