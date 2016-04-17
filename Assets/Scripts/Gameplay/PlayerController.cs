@@ -16,11 +16,17 @@ public class PlayerController : MonoBehaviour {
 		ResetPosition();
     }
 
-	public void ResetPosition() {
+    public void ResetPosition()
+    {
 		_rigidBody.position = initialPosition;
 		_rigidBody.velocity = velocity;
         Update();
-	}
+    }
+
+    public void HitObstacle()
+    {
+        GetComponent<Animator>().SetTrigger("hurt");
+    }
 
     void Update()
     {
