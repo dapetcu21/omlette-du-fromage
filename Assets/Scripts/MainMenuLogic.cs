@@ -24,13 +24,41 @@ public class MainMenuLogic : MonoBehaviour {
     public
     void OnClick_Start()
     {
-        GameplayManager.instance.gameSettings.currentLevel = "GamePlay";
-        SceneManager.LoadScene(GameplayManager.instance.gameSettings.currentLevel);
+        if(GameplayManager.instance.gameSettings.firstTimeEnteringGame == true) {
+            GameplayManager.instance.gameSettings.currentLevel = "Tutorial";
+            SceneManager.LoadScene(GameplayManager.instance.gameSettings.currentLevel);
+            GameplayManager.instance.gameSettings.firstTimeEnteringGame = false;
+        }
+        else
+        {
+            GameplayManager.instance.gameSettings.currentLevel = "Level01";
+            SceneManager.LoadScene(GameplayManager.instance.gameSettings.currentLevel);
+        }
     }
 
     public
     void OnClick_Quit()
     {
         Application.Quit();
+    }
+
+    public
+    void OnClick_Sounds()
+    {
+        if (AudioListener.volume > 0)
+        {
+            AudioListener.volume = 0;
+        }
+        else
+        {
+            AudioListener.volume = 100;
+        }
+    }
+
+    public
+    void OnClick_TutorialContinue()
+    {
+        GameplayManager.instance.gameSettings.currentLevel = "Level01";
+        SceneManager.LoadScene(GameplayManager.instance.gameSettings.currentLevel);
     }
 }

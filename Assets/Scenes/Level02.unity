@@ -172,7 +172,7 @@ RectTransform:
   - {fileID: 730765361}
   - {fileID: 1209812624}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -228,10 +228,6 @@ Prefab:
     - target: {fileID: 452586, guid: e2976be2d6efc9344b69028cbd1de63f, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.3009527
-      objectReference: {fileID: 0}
-    - target: {fileID: 158834, guid: e2976be2d6efc9344b69028cbd1de63f, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2976be2d6efc9344b69028cbd1de63f, type: 2}
@@ -547,7 +543,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 484554, guid: ce65332847d569946b35744c1fc2e063, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 484554, guid: ce65332847d569946b35744c1fc2e063, type: 2}
       propertyPath: m_LocalRotation.x
