@@ -19,17 +19,19 @@ public class GameplayManager : MonoBehaviour
     public GameObject winPanel;
     public GameObject pausePanel;
 
-    private bool isPaused;
-    private float beforeTimeScale;
+    private bool _isMuted;
+    private bool _isPaused;
+    private float _beforeTimeScale;
 
 	void Start () {
-        isPaused = false;
+        _isMuted = false;
+        _isPaused = false;
 	}
 
 	void Update () {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
+            if (_isPaused)
                 Resume();
             else
                 Pause();
@@ -62,16 +64,33 @@ public class GameplayManager : MonoBehaviour
 
     public void Pause()
     {
-        isPaused = true;
-        beforeTimeScale = Time.timeScale;
+        _isPaused = true;
+        _beforeTimeScale = Time.timeScale;
         Time.timeScale = 0.0f;
         pausePanel.SetActive(true);
     }
 
     public void Resume()
     {
-        isPaused = false;
-        Time.timeScale = beforeTimeScale;
+        _isPaused = false;
+        Time.timeScale = _beforeTimeScale;
         pausePanel.SetActive(false);
+    }
+
+    public void Mute()
+    {
+        _isMuted = true;
+        AudioListener.volume = 0.0f;
+    }
+
+    public void Unmute()
+    {
+        _isMuted = false;
+        AudioListener.volume = 1.0f;
+    }
+
+    public bool GetMuted()
+    {
+        return _isMuted;
     }
 }
