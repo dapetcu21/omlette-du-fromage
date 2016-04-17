@@ -19,6 +19,12 @@ public class WinControl : MonoBehaviour {
         GameplayManager.instance.MainMenu();
     }
 
+    public void Retry()
+    {
+        GetComponent<Animator>().SetTrigger("PopDown");
+        GameplayManager.instance.ResetLevel();
+    }
+
     public void SetStars(int count)
     {
         int i;

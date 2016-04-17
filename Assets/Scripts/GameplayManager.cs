@@ -20,9 +20,15 @@ public class GameplayManager : MonoBehaviour
     public GameObject winPanel;
     public GameObject pausePanel;
 
+    public float targetTime = 5.0f;
+    public float twoStarsPercent = 130;
+    public float oneStarPercent = 200;
+
     private bool _isMuted;
     private bool _isPaused;
     private float _beforeTimeScale;
+
+    private float startTime;
 
     List<RopeController> _ropeControllers = new List<RopeController>();
 
@@ -31,7 +37,8 @@ public class GameplayManager : MonoBehaviour
         _isMuted = false;
         _isPaused = false;
         Time.timeScale = 1.0f;
-	}
+        startTime = Time.time;
+    }
 
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -67,6 +74,9 @@ public class GameplayManager : MonoBehaviour
             rc.userInputEnabled = false;
             rc.AnimateResetBumps();
         }
+
+        //reset start time also
+        startTime = Time.time;
     }
 
     public void DeathAnimationEnd()
@@ -76,10 +86,12 @@ public class GameplayManager : MonoBehaviour
         }
     }
 
-    public void NextLevel () {
-		print("Hey! You just advanced to a new level! What about doing something productive?");
-        SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings + 1);
-	}
+    public void NextLevel ()
+    {
+        int c = SceneManager.GetActiveScene().buildIndex;
+        if (c < SceneManager.sceneCountInBuildSettings)
+            SceneManager.LoadScene(c + 1);
+    }
 
     public void MainMenu()
     {
@@ -125,7 +137,23 @@ public class GameplayManager : MonoBehaviour
 
     public int GetStarCount()
     {
-        return 3;
+        float playTime = Time.time - startTime;
+        if (playTime < targetTime)
+        {
+            return 3;
+        }
+        else if(playTime < targetTime * twoStarsPercent/100.0f)
+        {
+            return 2;
+        }
+        else if (playTime < targetTime * oneStarPercent/100.0f)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
     }
     
 }
