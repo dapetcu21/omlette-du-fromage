@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour {
     public void DeathAnimationEnd()
     {
         _animator.SetTrigger("reset");
+        GameplayManager.instance.DeathAnimationEnd();
     }
 
     public void ResetPosition()

@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class GameplayManager : MonoBehaviour
@@ -18,22 +18,43 @@ public class GameplayManager : MonoBehaviour
 	public GameObject player;
     public GameObject winPanel;
 
-	void Start () {
+    List<RopeController> _ropeControllers = new List<RopeController>();
+
+    void Start()
+    {
 	}
 
-	void Update () {
-	}
+    void Update()
+    {
+    }
 
-	public void Win () {
+    public void AddRopeController(RopeController rc)
+    {
+        _ropeControllers.Add(rc);
+    }
+
+    public void Win () {
 		print ("Hey! You just won! Congratulations! Go do something productive with your life now!");
         winPanel.SetActive(true);
 	}
 
-	public void Lose () {
+    public void Lose()
+    {
 		player.GetComponent<PlayerController>().Die();
-	}
+        foreach (RopeController rc in _ropeControllers) {
+            rc.userInputEnabled = false;
+            rc.AnimateResetBumps();
+        }
+    }
 
-	public void NextLevel () {
+    public void DeathAnimationEnd()
+    {
+        foreach (RopeController rc in _ropeControllers) {
+            rc.userInputEnabled = true;
+        }
+    }
+
+    public void NextLevel () {
 		print("Hey! You just advanced to a new level! What about doing something productive?");
         SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings + 1);
 	}
