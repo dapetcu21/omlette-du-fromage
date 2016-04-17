@@ -49,6 +49,7 @@ public class GameplayManager : MonoBehaviour
     public void Win () {
 		print ("Hey! You just won! Congratulations! Go do something productive with your life now!");
         winPanel.SetActive(true);
+        winPanel.GetComponent<WinControl>().SetStars(GetStarCount());
 	}
 
     public void Lose()
@@ -112,5 +113,10 @@ public class GameplayManager : MonoBehaviour
     public bool GetMuted()
     {
         return _isMuted;
+    }
+
+    public int GetStarCount()
+    {
+        return 3;
     }
 }
