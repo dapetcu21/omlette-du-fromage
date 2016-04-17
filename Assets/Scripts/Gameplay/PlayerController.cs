@@ -42,14 +42,14 @@ public class PlayerController : MonoBehaviour {
 
     public void HitObstacle()
     {
-        Animator animator = GetComponent<Animator>();
+        Animator animator = GetComponentInChildren<Animator>();
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
-            GetComponent<Animator>().SetTrigger("hurt");
+            animator.SetTrigger("hurt");
         }
     }
 
     void Update()
-    {
+        {
         if (_died) { return; }
 
         Vector2 vel = _rigidBody.velocity;
