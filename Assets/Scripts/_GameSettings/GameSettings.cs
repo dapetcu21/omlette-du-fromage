@@ -9,6 +9,8 @@ namespace GameSettings
 		public float	bumpHorizontalScale = 0.5f;
 		public string   currentLevel = "GamePlay";
         public bool 	firstTimeEnteringGame = true;
+        public float 	staticEnemyWiggleAmount = 0.1f;
+        public float 	staticEnemyWiggleSpeed = 1.0f;
         public Debug	debug;
 	}
 }
