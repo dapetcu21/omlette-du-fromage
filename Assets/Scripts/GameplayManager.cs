@@ -24,6 +24,8 @@ public class GameplayManager : MonoBehaviour
     public float twoStarsPercent = 130;
     public float oneStarPercent = 200;
 
+    public int levelCount = 36;
+
     private bool _isMuted;
     private bool _isPaused;
     private float _beforeTimeScale;
@@ -57,7 +59,11 @@ public class GameplayManager : MonoBehaviour
 
     public void Win () {
 		print ("Hey! You just won! Congratulations! Go do something productive with your life now!");
-        winPanel.SetActive(true);
+
+        //update and save progress
+        int starCount = GetStarCount();
+
+        //update and activate win panel
         winPanel.GetComponent<WinControl>().SetStars(GetStarCount());
         winPanel.GetComponent<Animator>().SetTrigger("PopUp");
     }
@@ -156,4 +162,10 @@ public class GameplayManager : MonoBehaviour
         }
     }
     
+    /*
+    public int GetLevelIndex()
+    {
+        SceneManager.GetActiveScene();
+    }
+    */
 }
