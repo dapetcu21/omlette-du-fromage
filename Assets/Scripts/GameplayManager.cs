@@ -30,7 +30,7 @@ public class GameplayManager : MonoBehaviour
 	}
 
 	public void Lose () {
-		player.GetComponent<PlayerController>().ResetPosition();
+		player.GetComponent<PlayerController>().Die();
 	}
 
 	public void NextLevel () {
