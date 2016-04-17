@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ba4ecbfebf8cde042bed40f13e8314dd
+timeCreated: 1460923350
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - buttonImage: {instanceID: 0}
+  - fullStar: {fileID: 21300000, guid: bd443139583c000418f6bdc570cadbac, type: 3}
+  - blankStar: {fileID: 21300000, guid: 1b5ff138e2d1a31488252020c67401a9, type: 3}
+  - lockedStar: {fileID: 21300000, guid: 208b6ab1acb908842a99ed51d6e98f84, type: 3}
+  - lockedLevel: {fileID: 21300000, guid: d60ab3f5cb465e44582e6ac6ef698776, type: 3}
+  - unlockedLevel: {fileID: 21300000, guid: 6c96a107a8354604a86f986845353212, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
