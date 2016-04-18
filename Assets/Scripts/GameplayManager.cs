@@ -213,12 +213,6 @@ public class GameplayManager : MonoBehaviour
 		_playerController.AwakenPlayer();
     }
 
-    public void PlayButtonClick()
-    {
-        MusicManager man = MusicManager.instance;
-        if (man) { man.PlayButtonClick(); }
-    }
-
     public void LoadProgress()
     {
         if (!HadProgress())

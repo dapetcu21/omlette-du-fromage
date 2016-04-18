@@ -24,6 +24,12 @@ public class PauseControl : MonoBehaviour
         _ResetButtons();
     }
 
+    public void PlayButtonClick()
+    {
+        MusicManager man = MusicManager.instance;
+        if (man) { man.PlayButtonClick(); }
+    }
+
     public void HidePanel()
     {
         animator.SetTrigger("PopDown");

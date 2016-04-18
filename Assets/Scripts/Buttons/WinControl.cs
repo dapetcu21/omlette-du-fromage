@@ -29,6 +29,12 @@ public class WinControl : MonoBehaviour {
         pauseControl.gameObject.SetActive(true);
     }
 
+    public void PlayButtonClick()
+    {
+        MusicManager man = MusicManager.instance;
+        if (man) { man.PlayButtonClick(); }
+    }
+
     void _ResetButtons()
     {
         EventSystem.current.SetSelectedGameObject(null);
