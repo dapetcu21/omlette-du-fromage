@@ -68,6 +68,9 @@ public class RopeController : MonoBehaviour
     void _OnTouchDown(int index, Vector2 touch)
     {
         if (!userInputEnabled) { return; }
+
+        GameplayManager.instance.OnTouchDown();
+
         Vector2 grabStart = transform.InverseTransformPoint(_gameCamera.ScreenToWorldPoint(touch));
 		bool grabbing = false;
 

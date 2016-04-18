@@ -12,12 +12,13 @@ public class PlayerController : MonoBehaviour {
     Animator _animator;
     Vector2 _initialPosition;
     bool _died = false;
+    bool _awakened = false;
 
     AudioSource _audioSource;
 
     void Awake()
     {
-        GameplayManager.instance.player = gameObject;
+        GameplayManager.instance.SetPlayerController(this);
         _rigidBody = GetComponent<Rigidbody2D>();
         _animator = GetComponentInChildren<Animator>();
         _initialPosition = _rigidBody.position;
@@ -33,6 +34,15 @@ public class PlayerController : MonoBehaviour {
         _rigidBody.velocity = Vector2.zero;
     }
 
+    public void AwakenPlayer()
+    {
+        if (!_awakened)
+        {
+            _awakened = true;
+            _rigidBody.velocity = velocity;
+        }
+    }
+
     public void DeathAnimationEnd()
     {
         _animator.SetTrigger("reset");
@@ -43,15 +53,19 @@ public class PlayerController : MonoBehaviour {
     {
         _rigidBody.position = _initialPosition;
         transform.position = _initialPosition;
-        _rigidBody.velocity = velocity;
+        _awakened = false;
         _died = false;
+        _rigidBody.velocity = velocity;
         Update();
+        _rigidBody.velocity = Vector2.zero;
     }
 
     public void HitObstacle()
     {
-        if(!_audioSource.isPlaying)
-            _audioSource.PlayOneShot(hitSFX[ Random.Range(0, hitSFX.Count-1) ]);
+        if (!_audioSource.isPlaying) {
+            _audioSource.PlayOneShot(hitSFX[Random.Range(0, hitSFX.Count - 1)]);
+        }
+
         Animator animator = GetComponentInChildren<Animator>();
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
             animator.SetTrigger("hurt");
@@ -60,7 +74,7 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
     {
-        if (_died) { return; }
+        if (_died || !_awakened) { return; }
 
         Vector2 vel = _rigidBody.velocity;
 

@@ -40,6 +40,7 @@ public class GameplayManager : MonoBehaviour
 
     private float startTime;
 
+    private PlayerController _playerController;
     private WinControl _winControl;
     private PauseControl _pauseControl;
 
@@ -65,20 +66,10 @@ public class GameplayManager : MonoBehaviour
 
     public bool IsPaused() { return _isPaused; }
 
-    public void SetWinControl(WinControl wc)
-    {
-        _winControl = wc;
-    }
-
-    public void SetPauseControl(PauseControl pc)
-    {
-        _pauseControl = pc;
-    }
-
-    public void AddRopeController(RopeController rc)
-    {
-        _ropeControllers.Add(rc);
-    }
+    public void SetWinControl(WinControl wc) { _winControl = wc; }
+    public void SetPauseControl(PauseControl pc) { _pauseControl = pc; }
+    public void AddRopeController(RopeController rc) { _ropeControllers.Add(rc); }
+    public void SetPlayerController(PlayerController pc) { _playerController = pc; }
 
     public void Win () {
 
@@ -111,7 +102,7 @@ public class GameplayManager : MonoBehaviour
 
     public void ResetLevel()
     {
-		player.GetComponent<PlayerController>().Die();
+		_playerController.Die();
         foreach (RopeController rc in _ropeControllers) {
             rc.userInputEnabled = false;
             rc.AnimateResetBumps();
@@ -141,7 +132,7 @@ public class GameplayManager : MonoBehaviour
 
     public void PlayerHitObstacle()
     {
-        player.GetComponent<PlayerController>().HitObstacle();
+        _playerController.HitObstacle();
     }
 
     public void Pause()
@@ -187,6 +178,11 @@ public class GameplayManager : MonoBehaviour
     {
         string levelIndexStr = SceneManager.GetActiveScene().name.Substring(5);
         return Int32.Parse(levelIndexStr);
+    }
+
+    public void OnTouchDown()
+    {
+		_playerController.AwakenPlayer();
     }
 
     public void LoadProgress()
