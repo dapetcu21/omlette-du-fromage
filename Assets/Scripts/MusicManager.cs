@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using GameSettings;
 
 public class MusicManager : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class MusicManager : MonoBehaviour
 
     public AudioSource menuSource;
     public AudioSource gameSource;
+    public GameSettings.GameSettings gameSettings;
 
     void Awake()
     {
@@ -18,13 +20,15 @@ public class MusicManager : MonoBehaviour
 
     public void PlayMenuMusic()
     {
+        float volume = gameSettings.musicVolume;
         gameSource.GetComponent<AudioFade>().FadeTo(0.0f, true);
-        menuSource.GetComponent<AudioFade>().FadeTo(1.0f, false);
+        menuSource.GetComponent<AudioFade>().FadeTo(volume, false);
     }
 
     public void PlayGameMusic()
     {
+        float volume = gameSettings.musicVolume;
         menuSource.GetComponent<AudioFade>().FadeTo(0.0f, true);
-        gameSource.GetComponent<AudioFade>().FadeTo(1.0f, false);
+        gameSource.GetComponent<AudioFade>().FadeTo(volume, false);
     }
 }

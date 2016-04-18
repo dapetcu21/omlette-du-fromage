@@ -1160,7 +1160,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22493578, guid: d6f99eb144596b7478511cba1a1fd631, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -44
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6f99eb144596b7478511cba1a1fd631, type: 2}
@@ -1537,6 +1537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuSource: {fileID: 241142751}
   gameSource: {fileID: 260300346}
+  gameSettings: {fileID: 11473782, guid: d65b67556e5fae64f8b40f874729fe34, type: 2}
 --- !u!224 &1565001080
 RectTransform:
   m_ObjectHideFlags: 0
