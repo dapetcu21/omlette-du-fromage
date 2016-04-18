@@ -144,6 +144,14 @@ MonoBehaviour:
   lockedStar: {fileID: 21300000, guid: 208b6ab1acb908842a99ed51d6e98f84, type: 3}
   lockedLevel: {fileID: 21300000, guid: 6c96a107a8354604a86f986845353212, type: 3}
   unlockedLevel: {fileID: 21300000, guid: d60ab3f5cb465e44582e6ac6ef698776, type: 3}
+  lockedList:
+  - {fileID: 21300000, guid: a583b7815bbdcef43aae0dbb597c488b, type: 3}
+  - {fileID: 21300000, guid: 9dc5d8287a72a4744a345aaa5e8354b6, type: 3}
+  - {fileID: 21300000, guid: 9aa27bab5635b184889f11d13fd854f8, type: 3}
+  unlockedList:
+  - {fileID: 21300000, guid: ff5cecd049136b24b9890c389cf9b8f8, type: 3}
+  - {fileID: 21300000, guid: 6d14923ad37da1040ac8c033d34803c7, type: 3}
+  - {fileID: 21300000, guid: b725e302357785c4887024f5c8881dbe, type: 3}
 --- !u!114 &11444882
 MonoBehaviour:
   m_ObjectHideFlags: 1

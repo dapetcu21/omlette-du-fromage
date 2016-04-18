@@ -12,8 +12,8 @@ public class LevelBrowserItem : MonoBehaviour {
     public Sprite fullStar;
     public Sprite blankStar;
     public Sprite lockedStar;
-    public Sprite lockedLevel;
-    public Sprite unlockedLevel;
+    public List<Sprite> lockedList = new List<Sprite>();
+    public List<Sprite> unlockedList = new List<Sprite>();
 
     private int _starCount = 0;
     private bool _isLocked = true;
@@ -34,15 +34,26 @@ public class LevelBrowserItem : MonoBehaviour {
 
         if (isLocked == true)
         {
-            buttonImage.sprite = lockedLevel;
             for (i = 0; i < 3 && i < starList.Count; i++)
             {
                 starList[i].sprite = lockedStar;
             }
+
+            if (_levelIndex >= 1 && _levelIndex <= 12)
+            {
+                buttonImage.sprite = lockedList[0];
+            }
+            else if (_levelIndex >= 13 && _levelIndex <= 24)
+            {
+                buttonImage.sprite = lockedList[1];
+            }
+            else if (_levelIndex >= 25 && _levelIndex <= 36)
+            {
+                buttonImage.sprite = lockedList[2];
+            }
         }
         else
         {
-            buttonImage.sprite = unlockedLevel;
             for (i = 0; i < _starCount && i < starList.Count; i++)
             {
                 starList[i].sprite = fullStar;
@@ -53,6 +64,18 @@ public class LevelBrowserItem : MonoBehaviour {
                 starList[i].sprite = blankStar;
             }
 
+            if (_levelIndex >= 1 && _levelIndex <= 12)
+            {
+                buttonImage.sprite = unlockedList[0];
+            }
+            else if (_levelIndex >= 13 && _levelIndex <= 24)
+            {
+                buttonImage.sprite = unlockedList[1];
+            }
+            else if (_levelIndex >= 25 && _levelIndex <= 36)
+            {
+                buttonImage.sprite = unlockedList[2];
+            }
         }
     }
 
