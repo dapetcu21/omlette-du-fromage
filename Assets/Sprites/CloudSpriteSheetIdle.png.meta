@@ -1,0 +1,213 @@
+fileFormatVersion: 2
+guid: e5342a3bf9a6946978e691b44e16dcb6
+timeCreated: 1461019704
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CloudSpriteSheetIdle_0
+    21300002: CloudSpriteSheetIdle_1
+    21300004: CloudSpriteSheetIdle_2
+    21300006: CloudSpriteSheetIdle_3
+    21300008: CloudSpriteSheetIdle_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CloudSpriteSheetIdle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.6492202, y: 0.3919441}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31.750473, y: 132.57788}
+        - {x: -83.75047, y: 88.57788}
+        - {x: -115.75047, y: 6.577881}
+        - {x: -115.75047, y: -41.42212}
+        - {x: -66.75047, y: -61.42212}
+        - {x: 40.249527, y: -61.42212}
+        - {x: 68.24953, y: -45.42212}
+        - {x: 70.24953, y: -29.42212}
+        - {x: 70.24953, y: 107.57788}
+        - {x: 52.249527, y: 132.57788}
+      - - {x: -145.75047, y: -34.42212}
+        - {x: -142.75047, y: -33.42212}
+        - {x: -142.75047, y: -30.42212}
+        - {x: -145.75047, y: -29.42212}
+        - {x: -147.75047, y: -31.42212}
+      - - {x: 72.24953, y: 84.57788}
+        - {x: 66.24953, y: 68.57788}
+        - {x: 66.24953, y: 55.57788}
+        - {x: 71.24953, y: 49.57788}
+        - {x: 73.24953, y: 48.57788}
+        - {x: 87.24953, y: 48.57788}
+        - {x: 94.24953, y: 53.57788}
+        - {x: 94.24953, y: 75.57788}
+        - {x: 89.24953, y: 84.57788}
+    - name: CloudSpriteSheetIdle_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 704
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.6492202, y: 0.3919441}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 93.24951, y: 47.57788}
+        - {x: 93.24951, y: 119.57788}
+        - {x: 64.24951, y: 130.57788}
+        - {x: -114.75049, y: 130.57788}
+        - {x: -121.75049, y: 94.57788}
+        - {x: -121.75049, y: -61.42212}
+        - {x: 37.24951, y: -61.42212}
+        - {x: 93.24951, y: -4.422119}
+        - {x: 93.24951, y: -3.4221191}
+        - {x: 64.24951, y: 44.57788}
+        - {x: 61.24951, y: 49.57788}
+        - {x: 72.24951, y: 41.57788}
+    - name: CloudSpriteSheetIdle_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 704
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.6492202, y: 0.3919441}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -124.75049, y: 21.57788}
+        - {x: -124.75049, y: -30.42212}
+        - {x: -116.75049, y: -55.42212}
+        - {x: -99.75049, y: -61.42212}
+        - {x: 44.24951, y: -61.42212}
+        - {x: 92.24951, y: -1.4221191}
+        - {x: 92.24951, y: 97.57788}
+        - {x: 87.24951, y: 105.57788}
+        - {x: 62.24951, y: 117.57788}
+        - {x: 23.249512, y: 117.57788}
+        - {x: -4.7504883, y: 112.57788}
+      - - {x: -12.750488, y: 129.57788}
+        - {x: -22.750488, y: 126.57788}
+        - {x: -26.750488, y: 117.57788}
+        - {x: -26.750488, y: 101.57788}
+        - {x: -22.750488, y: 97.57788}
+        - {x: -7.7504883, y: 97.57788}
+        - {x: 2.2495117, y: 114.57788}
+        - {x: 2.2495117, y: 124.57788}
+        - {x: 0.24951172, y: 129.57788}
+    - name: CloudSpriteSheetIdle_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.6492202, y: 0.3919441}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6.249527, y: 117.57788}
+        - {x: -4.750473, y: 115.57788}
+        - {x: -127.75047, y: 5.577881}
+        - {x: -129.75047, y: 2.5778809}
+        - {x: -129.75047, y: -33.42212}
+        - {x: -86.75047, y: -61.42212}
+        - {x: 52.249527, y: -61.42212}
+        - {x: 92.24953, y: 21.57788}
+        - {x: 92.24953, y: 85.57788}
+        - {x: 82.24953, y: 117.57788}
+      - - {x: -16.750473, y: 127.57788}
+        - {x: -23.750473, y: 126.57788}
+        - {x: -26.750473, y: 119.57788}
+        - {x: -26.750473, y: 99.57788}
+        - {x: -22.750473, y: 95.57788}
+        - {x: -7.750473, y: 95.57788}
+        - {x: 1.249527, y: 117.57788}
+        - {x: 2.249527, y: 122.57788}
+        - {x: -0.750473, y: 127.57788}
+    - name: CloudSpriteSheetIdle_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.6492202, y: 0.3919441}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 76.24951, y: 118.57788}
+        - {x: 1.2495117, y: 118.57788}
+        - {x: -39.75049, y: 100.57788}
+        - {x: -118.75049, y: -2.4221191}
+        - {x: -122.75049, y: -10.422119}
+        - {x: -122.75049, y: -17.42212}
+        - {x: -106.75049, y: -41.42212}
+        - {x: -64.75049, y: -61.42212}
+        - {x: 48.24951, y: -61.42212}
+        - {x: 93.24951, y: -5.422119}
+        - {x: 93.24951, y: 101.57788}
+        - {x: 88.24951, y: 107.57788}
+      - - {x: -11.750488, y: 130.57788}
+        - {x: -21.750488, y: 127.57788}
+        - {x: -25.750488, y: 118.57788}
+        - {x: -25.750488, y: 102.57788}
+        - {x: -21.750488, y: 98.57788}
+        - {x: -6.7504883, y: 98.57788}
+        - {x: 3.2495117, y: 115.57788}
+        - {x: 3.2495117, y: 125.57788}
+        - {x: 1.2495117, y: 130.57788}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

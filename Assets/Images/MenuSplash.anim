@@ -341,11 +341,11 @@ AnimationClip:
         tangentMode: 10
       - time: 1.92
         value: -20.1101
-        inSlope: 511.85098
-        outSlope: 511.85098
+        inSlope: 534.56287
+        outSlope: 534.56287
         tangentMode: 10
       - time: 2.32
-        value: -52.46949
+        value: -34.3
         inSlope: 121.01086
         outSlope: -81.4205
         tangentMode: 17
@@ -783,11 +783,11 @@ AnimationClip:
         tangentMode: 10
       - time: 1.92
         value: -20.1101
-        inSlope: 511.85098
-        outSlope: 511.85098
+        inSlope: 534.56287
+        outSlope: 534.56287
         tangentMode: 10
       - time: 2.32
-        value: -52.46949
+        value: -34.3
         inSlope: 121.01086
         outSlope: -81.4205
         tangentMode: 17

@@ -13,7 +13,6 @@ public class MusicManager : MonoBehaviour
 
     void Awake()
     {
-        print("awake");
         if (MusicManager.instance) { return; }
         MusicManager.instance = this;
 		DontDestroyOnLoad(gameObject);

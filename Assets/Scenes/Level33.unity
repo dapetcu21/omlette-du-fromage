@@ -156,7 +156,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 469562, guid: ba7e9a635021141b99c94062d0dbd5c8, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba7e9a635021141b99c94062d0dbd5c8, type: 2}
@@ -206,7 +206,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 418962, guid: d8dba9038f2af456cb6193ce13cf522c, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11460130, guid: d8dba9038f2af456cb6193ce13cf522c, type: 2}
       propertyPath: initialBumps.Array.data[0].y
@@ -256,7 +256,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 469562, guid: 7084b2530a28f99468fdee92c749213b, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 150088, guid: 7084b2530a28f99468fdee92c749213b, type: 2}
       propertyPath: m_IsActive
@@ -302,7 +302,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 466898, guid: d8eabe8dad2b34bb7adf64629e4a3f7c, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8eabe8dad2b34bb7adf64629e4a3f7c, type: 2}
@@ -458,7 +458,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 402274, guid: 965fbd3032bae4b12baf34d72920caf1, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 120816, guid: 965fbd3032bae4b12baf34d72920caf1, type: 2}
       propertyPath: m_Name
@@ -788,7 +788,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 482864, guid: 50cc9db00f1644547985d7fe8c760808, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11414742, guid: 50cc9db00f1644547985d7fe8c760808, type: 2}
       propertyPath: patrolPointA.y
@@ -846,7 +846,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 482864, guid: 50cc9db00f1644547985d7fe8c760808, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 120836, guid: 50cc9db00f1644547985d7fe8c760808, type: 2}
       propertyPath: m_Name
