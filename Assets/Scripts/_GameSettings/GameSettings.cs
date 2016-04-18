@@ -12,6 +12,8 @@ namespace GameSettings
         public float 	staticEnemyWiggleAmount = 0.1f;
         public float 	staticEnemyWiggleSpeed = 1.0f;
         public float 	ropeGrabTreshold = 0.1f;
+        public float minPlayerVelocity = 0.5f;
+        public float musicVolume = 0.5f;
         public Debug	debug;
 	}
 }

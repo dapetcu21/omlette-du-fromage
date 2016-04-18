@@ -37,6 +37,7 @@ public class GameplayManager : MonoBehaviour
     private bool _isMuted;
     private bool _isPaused;
     private float _beforeTimeScale;
+    private bool _finished = false;
 
     private float startTime;
 
@@ -70,12 +71,33 @@ public class GameplayManager : MonoBehaviour
 
     public bool IsPaused() { return _isPaused; }
 
-    public void SetWinControl(WinControl wc) { _winControl = wc; }
-    public void SetPauseControl(PauseControl pc) { _pauseControl = pc; }
+    public void SetWinControl(WinControl wc)
+    {
+        _winControl = wc;
+        if (_pauseControl)
+        {
+            _pauseControl.winControl = _winControl;
+	        _winControl.pauseControl = _pauseControl;
+        }
+    }
+    public void SetPauseControl(PauseControl pc)
+    {
+        _pauseControl = pc;
+        if (_winControl)
+        {
+            _pauseControl.winControl = _winControl;
+            _winControl.pauseControl = _pauseControl;
+        }
+    }
     public void AddRopeController(RopeController rc) { _ropeControllers.Add(rc); }
     public void SetPlayerController(PlayerController pc) { _playerController = pc; }
 
-    public void Win () {
+    public void Win()
+    {
+        if (_finished) { return; }
+        _finished = true;
+
+        _playerController.Win();
 
         //update and save progress
         int starCount = GetStarCount();
@@ -101,7 +123,8 @@ public class GameplayManager : MonoBehaviour
 
     public void Lose()
     {
-		ResetLevel();
+        if (_finished) { return; }
+        ResetLevel();
     }
 
     public void ResetLevel()
@@ -141,6 +164,7 @@ public class GameplayManager : MonoBehaviour
 
     public void Pause()
     {
+        if (_finished) { return; }
         _isPaused = true;
         _beforeTimeScale = Time.timeScale;
         Time.timeScale = 0.0f;
