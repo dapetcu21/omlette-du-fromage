@@ -28,8 +28,8 @@ GameObject:
   - 4: {fileID: 426706}
   - 61: {fileID: 6123960}
   - 114: {fileID: 11493680}
-  - 120: {fileID: 12080078}
   - 114: {fileID: 11471410}
+  - 212: {fileID: 21242274}
   m_Layer: 0
   m_Name: RightWall
   m_TagString: Untagged
@@ -592,8 +592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSettings: {fileID: 11473782, guid: d65b67556e5fae64f8b40f874729fe34, type: 2}
   isTop: 1
-  initialBumps:
-  - {x: 0, y: -4}
+  initialBumps: []
   pullEdgeSounds:
   - {fileID: 8300000, guid: 930122a2b2d455c4ca3e1a55da704a27, type: 3}
   - {fileID: 8300000, guid: 0fc8a0e5ae2597f44a628f9266381800, type: 3}
@@ -729,8 +728,8 @@ LineRenderer:
       serializedVersion: 2
       rgba: 4294967295
   m_UseWorldSpace: 0
---- !u!120 &12080078
-LineRenderer:
+--- !u!212 &21242274
+SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -739,11 +738,11 @@ LineRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 2100000, guid: 492f04e50a50a734b9d498d82149cec6, type: 2}
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
@@ -755,19 +754,10 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: -0.15, y: 25, z: -1}
-  - {x: -0.15, y: -25, z: -1}
-  m_Parameters:
-    startWidth: 0.05
-    endWidth: 0.05
-    m_StartColor:
-      serializedVersion: 2
-      rgba: 4294967295
-    m_EndColor:
-      serializedVersion: 2
-      rgba: 4294967295
-  m_UseWorldSpace: 0
+  m_Sprite: {fileID: 21300000, guid: eac75cf7f84314c0c8dd78a17f7cf78d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
