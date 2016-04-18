@@ -257,10 +257,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 11472280, guid: 04f6a0f8c07c72e43b7e8158e73d2da3, type: 2}
-      propertyPath: tailText
-      value: Thank you for playing!
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04f6a0f8c07c72e43b7e8158e73d2da3, type: 2}
   m_IsPrefabParent: 0
@@ -310,21 +306,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba7e9a635021141b99c94062d0dbd5c8, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &646435487 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 126518, guid: 04f6a0f8c07c72e43b7e8158e73d2da3, type: 2}
-  m_PrefabInternal: {fileID: 278386691}
---- !u!225 &646435488
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 646435487}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
 --- !u!1 &682598850
 GameObject:
   m_ObjectHideFlags: 0
