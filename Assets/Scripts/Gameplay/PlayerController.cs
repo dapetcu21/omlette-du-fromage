@@ -28,9 +28,9 @@ public class PlayerController : MonoBehaviour {
         _audioSource = GetComponent<AudioSource>();
     }
 
-    public void Die()
+    public void Die(bool lose = true)
     {
-        loseAudio.Play();
+        if (lose) { loseAudio.Play(); }
         _animator.SetTrigger("death");
         _died = true;
         _rigidBody.velocity = Vector2.zero;

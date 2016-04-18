@@ -124,12 +124,12 @@ public class GameplayManager : MonoBehaviour
     public void Lose()
     {
         if (_finished) { return; }
-        ResetLevel();
+        ResetLevel(true);
     }
 
-    public void ResetLevel()
+    public void ResetLevel(bool lose = false)
     {
-		_playerController.Die();
+		_playerController.Die(lose);
         foreach (RopeController rc in _ropeControllers) {
             rc.userInputEnabled = false;
             rc.AnimateResetBumps();
@@ -138,6 +138,7 @@ public class GameplayManager : MonoBehaviour
 
     public void DeathAnimationEnd()
     {
+        _finished = false;
         startTime = Time.time;
         foreach (RopeController rc in _ropeControllers) {
             rc.userInputEnabled = true;
