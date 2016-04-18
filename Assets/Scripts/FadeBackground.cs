@@ -13,7 +13,6 @@ public class FadeBackground : MonoBehaviour
 
     public void OnEndFade()
     {
-        print("on end fade");
         StartCoroutine(_transition.OnEndFade());
     }
 }

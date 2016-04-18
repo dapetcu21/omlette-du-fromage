@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class WinControl : MonoBehaviour {
 
@@ -14,21 +15,37 @@ public class WinControl : MonoBehaviour {
         GameplayManager.instance.SetWinControl(this);
     }
 
-    public void NextLevel()
+    public void ShowPanel()
+    {
+        GetComponent<Animator>().SetTrigger("PopUp");
+        _ResetButtons();
+    }
+
+    public void HidePanel()
     {
         GetComponent<Animator>().SetTrigger("PopDown");
+    }
+
+    void _ResetButtons()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+    }
+
+    public void NextLevel()
+    {
+        HidePanel();
         GameplayManager.instance.NextLevel();
     }
 
     public void MainMenu()
     {
-        GetComponent<Animator>().SetTrigger("PopDown");
+        HidePanel();
         GameplayManager.instance.MainMenu();
     }
 
     public void Retry()
     {
-        GetComponent<Animator>().SetTrigger("PopDown");
+        HidePanel();
         GameplayManager.instance.ResetLevel();
     }
 

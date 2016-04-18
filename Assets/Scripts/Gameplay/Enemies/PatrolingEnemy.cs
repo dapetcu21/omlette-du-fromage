@@ -37,9 +37,6 @@ public class PatrolingEnemy : MonoBehaviour
         float velocity = (distance < 0.5f) ? distance * 2.0f * patrolSpeed : patrolSpeed;
         transform.position = position + dir * velocity * Time.deltaTime;
 
-        print(distance);
-        print(target);
-
         if ((isPointA ? distanceA : distanceB) < 0.1f) { isPointA = !isPointA; }
     }
 }

@@ -8,11 +8,8 @@ public class CameraSetup : MonoBehaviour {
         float designAspect = 16.0f / 9.0f;
         float aspect = (float) Screen.width / Screen.height;
 
-        if (aspect < designAspect)
-        {
-            print(camera.orthographicSize);
+        if (aspect < designAspect) {
             camera.orthographicSize *= designAspect / aspect;
-            print(camera.orthographicSize);
         }
     }
 }
