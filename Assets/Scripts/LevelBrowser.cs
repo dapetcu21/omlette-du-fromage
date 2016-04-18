@@ -16,15 +16,21 @@ public class LevelBrowser : MonoBehaviour {
         _unlockedCount = GameplayManager.instance.GetUnlockedCount();
         _levelCount = GameplayManager.instance.GetLevelCount();
 
-        int i;
+        int i, k, pageIndex = 0, itemIndex = 0;
         GameObject currentItem;
-
-        for(i = 0; i < _levelCount; i++)
+        
+        for(k = 0; k < _levelCount / 3; k++)
         {
-            currentItem = (GameObject)Instantiate(levelBrowserItem);
-            currentItem.transform.SetParent(levelSelector.transform);
-            currentItem.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-            currentItem.GetComponent<LevelBrowserItem>().UpdateStars(_levelStars[i], (_unlockedCount > i) ? false : true, i+1);
-        }
+            for (i = 0; i < 3; i++)
+            {
+                pageIndex = itemIndex / 12;
+                itemIndex++;
+                currentItem = (GameObject)Instantiate(levelBrowserItem);
+                currentItem.transform.SetParent(levelSelector.transform);
+                currentItem.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+                currentItem.GetComponent<LevelBrowserItem>().UpdateStars(_levelStars[i], (_unlockedCount > i) ? false : true, 8 * pageIndex + i * 4 + k + 1);
+
+            }
+        }        
     }
 }
