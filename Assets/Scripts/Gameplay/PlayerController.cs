@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Update()
-        {
+    {
         if (_died) { return; }
 
         Vector2 vel = _rigidBody.velocity;

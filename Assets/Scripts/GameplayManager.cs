@@ -58,14 +58,12 @@ public class GameplayManager : MonoBehaviour
     }
 
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (_isPaused)
-                Resume();
-            else
-                Pause();
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+			_pauseControl.TogglePauseGame();
         }
     }
+
+    public bool IsPaused() { return _isPaused; }
 
     public void SetWinControl(WinControl wc)
     {

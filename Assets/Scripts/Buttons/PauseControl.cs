@@ -27,6 +27,17 @@ public class PauseControl : MonoBehaviour
         animator.SetTrigger("PopDown");
     }
 
+    public void TogglePauseGame()
+    {
+        GameplayManager gm = GameplayManager.instance;
+        if (gm.IsPaused()) {
+            HidePanel();
+            gm.Resume();
+        } else {
+            gm.Pause();
+        }
+    }
+
     public void ResumeGame()
     {
         HidePanel();
