@@ -78,6 +78,7 @@ public class GameplayManager : MonoBehaviour
 
     public void Win()
     {
+        if (_finished) { return; }
         _finished = true;
 
         //update and save progress
@@ -104,7 +105,8 @@ public class GameplayManager : MonoBehaviour
 
     public void Lose()
     {
-		ResetLevel();
+        if (_finished) { return; }
+        ResetLevel();
     }
 
     public void ResetLevel()
