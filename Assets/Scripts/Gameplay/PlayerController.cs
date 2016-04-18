@@ -7,15 +7,16 @@ public class PlayerController : MonoBehaviour {
 
     Rigidbody2D _rigidBody;
     Animator _animator;
-    Vector2 initialPosition;
+    Vector2 _initialPosition;
     bool _died = false;
 
-    void Start()
+    void Awake()
     {
+        print("awake");
         GameplayManager.instance.player = gameObject;
         _rigidBody = GetComponent<Rigidbody2D>();
         _animator = GetComponentInChildren<Animator>();
-        initialPosition = _rigidBody.position;
+        _initialPosition = _rigidBody.position;
 		ResetPosition();
     }
 
@@ -34,7 +35,8 @@ public class PlayerController : MonoBehaviour {
 
     public void ResetPosition()
     {
-		_rigidBody.position = initialPosition;
+        _rigidBody.position = _initialPosition;
+        print(_rigidBody.position);
 		_rigidBody.velocity = velocity;
         _died = false;
         Update();
