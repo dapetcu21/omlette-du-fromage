@@ -7,6 +7,7 @@ public class PauseControl : MonoBehaviour {
 
     void Start()
     {
+        GameplayManager.instance.SetPauseControl(this);
         pauseAnim = GetComponent<Animator>();
     }
 

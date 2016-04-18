@@ -19,7 +19,7 @@ public class GameplayManager : MonoBehaviour
             _levelStars.Add(0);
         }
         _unlockedCount = 1;
-        
+
         //load the progress at start
         LoadProgress();
     }
@@ -28,8 +28,6 @@ public class GameplayManager : MonoBehaviour
 
 	public GameSettings.GameSettings gameSettings;
 	public GameObject player;
-    public GameObject winPanel;
-    public GameObject pausePanel;
 
     public float twoStarsTargetTime = 20.0f;
     public float threeStarsPercent = 80;
@@ -41,8 +39,9 @@ public class GameplayManager : MonoBehaviour
     private float _beforeTimeScale;
 
     private float startTime;
-    
+
     private WinControl _winControl;
+    private PauseControl _pauseControl;
     private Animator _winAnim;
 
     List<RopeController> _ropeControllers = new List<RopeController>();
@@ -50,16 +49,13 @@ public class GameplayManager : MonoBehaviour
     //level logic
     private int _unlockedCount = 1;
     private List<int> _levelStars = new List<int>();
-    
+
     void Start()
     {
         _isMuted = false;
         _isPaused = false;
         Time.timeScale = 1.0f;
         startTime = Time.time;
-        
-        _winControl = winPanel.GetComponent<WinControl>();
-        _winAnim = winPanel.GetComponent<Animator>();
     }
 
 	void Update () {
@@ -70,6 +66,17 @@ public class GameplayManager : MonoBehaviour
             else
                 Pause();
         }
+    }
+
+    public void SetWinControl(WinControl wc)
+    {
+        _winControl = wc;
+        _winAnim = _winControl.GetComponent<Animator>();
+    }
+
+    public void SetPauseControl(PauseControl pc)
+    {
+        _pauseControl = pc;
     }
 
     public void AddRopeController(RopeController rc)
@@ -83,7 +90,7 @@ public class GameplayManager : MonoBehaviour
         int starCount = GetStarCount();
         //minus one because arrays starts at 0 and level names are from 1
         int levelIndex = GetLevelIndex();
-        
+
         //warning log
         if(levelIndex > levelCount)
         {
@@ -146,14 +153,14 @@ public class GameplayManager : MonoBehaviour
         _isPaused = true;
         _beforeTimeScale = Time.timeScale;
         Time.timeScale = 0.0f;
-        pausePanel.GetComponent<PauseControl>().pauseAnim.SetTrigger("PopUp");
+        _pauseControl.pauseAnim.SetTrigger("PopUp");
     }
 
     public void Resume()
     {
         _isPaused = false;
         Time.timeScale = _beforeTimeScale;
-        pausePanel.GetComponent<PauseControl>().pauseAnim.SetTrigger("PopDown");
+        _pauseControl.pauseAnim.SetTrigger("PopDown");
     }
 
     public void Mute()
@@ -180,7 +187,7 @@ public class GameplayManager : MonoBehaviour
         if (playTime <= twoStarsTargetTime * threeStarsPercent / 100.0f) { return 3; }
         return 2;
     }
-    
+
     public int GetLevelIndex()
     {
         string levelIndexStr = SceneManager.GetActiveScene().name.Substring(5);

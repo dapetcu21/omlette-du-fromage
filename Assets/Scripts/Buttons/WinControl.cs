@@ -9,6 +9,11 @@ public class WinControl : MonoBehaviour {
     public Sprite activeStar;
     public Sprite blankStar;
 
+    void Start()
+    {
+        GameplayManager.instance.SetWinControl(this);
+    }
+
     public void NextLevel()
     {
         GetComponent<Animator>().SetTrigger("PopDown");
