@@ -29,7 +29,7 @@ public class LevelBrowserItem : MonoBehaviour {
         _levelIndex = levelIndex;
         _starCount = starCount;
         _isLocked = isLocked;
-
+        
         levelText.text = "Level " + levelIndex;
 
         if (isLocked == true)
