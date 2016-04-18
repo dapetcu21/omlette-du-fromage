@@ -5,8 +5,9 @@ using System.Collections.Generic;
 public class PlayerController : MonoBehaviour {
 
     public Vector2 velocity;
-
     public List<AudioClip> hitSFX;
+    public AudioSource winAudio;
+    public AudioSource loseAudio;
 
     Rigidbody2D _rigidBody;
     Animator _animator;
@@ -29,9 +30,15 @@ public class PlayerController : MonoBehaviour {
 
     public void Die()
     {
+        loseAudio.Play();
         _animator.SetTrigger("death");
         _died = true;
         _rigidBody.velocity = Vector2.zero;
+    }
+
+    public void Win()
+    {
+        winAudio.Play();
     }
 
     public void AwakenPlayer()

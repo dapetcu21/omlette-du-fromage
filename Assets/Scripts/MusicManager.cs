@@ -8,6 +8,7 @@ public class MusicManager : MonoBehaviour
 
     public AudioSource menuSource;
     public AudioSource gameSource;
+    public AudioSource buttonSource;
     public GameSettings.GameSettings gameSettings;
 
     void Awake()
@@ -30,5 +31,10 @@ public class MusicManager : MonoBehaviour
         float volume = gameSettings.musicVolume;
         menuSource.GetComponent<AudioFade>().FadeTo(0.0f, true);
         gameSource.GetComponent<AudioFade>().FadeTo(volume, false);
+    }
+
+    public void PlayButtonClick()
+    {
+        buttonSource.Play();
     }
 }

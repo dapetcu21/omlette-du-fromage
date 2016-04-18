@@ -97,6 +97,8 @@ public class GameplayManager : MonoBehaviour
         if (_finished) { return; }
         _finished = true;
 
+        _playerController.Win();
+
         //update and save progress
         int starCount = GetStarCount();
         //minus one because arrays starts at 0 and level names are from 1
@@ -209,6 +211,12 @@ public class GameplayManager : MonoBehaviour
     public void OnTouchDown()
     {
 		_playerController.AwakenPlayer();
+    }
+
+    public void PlayButtonClick()
+    {
+        MusicManager man = MusicManager.instance;
+        if (man) { man.PlayButtonClick(); }
     }
 
     public void LoadProgress()
