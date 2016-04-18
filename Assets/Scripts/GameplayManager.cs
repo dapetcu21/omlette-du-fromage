@@ -42,7 +42,6 @@ public class GameplayManager : MonoBehaviour
 
     private WinControl _winControl;
     private PauseControl _pauseControl;
-    private Animator _winAnim;
 
     List<RopeController> _ropeControllers = new List<RopeController>();
 
@@ -71,7 +70,6 @@ public class GameplayManager : MonoBehaviour
     public void SetWinControl(WinControl wc)
     {
         _winControl = wc;
-        _winAnim = _winControl.GetComponent<Animator>();
     }
 
     public void SetPauseControl(PauseControl pc)
@@ -105,7 +103,7 @@ public class GameplayManager : MonoBehaviour
 
         //update and activate win panel
         _winControl.SetStars(GetStarCount());
-        _winAnim.SetTrigger("PopUp");
+		_winControl.ShowPanel();
     }
 
     public void Lose()
@@ -153,14 +151,13 @@ public class GameplayManager : MonoBehaviour
         _isPaused = true;
         _beforeTimeScale = Time.timeScale;
         Time.timeScale = 0.0f;
-        _pauseControl.pauseAnim.SetTrigger("PopUp");
+        _pauseControl.ShowPanel();
     }
 
     public void Resume()
     {
         _isPaused = false;
         Time.timeScale = _beforeTimeScale;
-        _pauseControl.pauseAnim.SetTrigger("PopDown");
     }
 
     public void Mute()
