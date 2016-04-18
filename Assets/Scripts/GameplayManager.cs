@@ -71,8 +71,16 @@ public class GameplayManager : MonoBehaviour
 
     public bool IsPaused() { return _isPaused; }
 
-    public void SetWinControl(WinControl wc) { _winControl = wc; }
-    public void SetPauseControl(PauseControl pc) { _pauseControl = pc; }
+    public void SetWinControl(WinControl wc)
+    {
+        _winControl = wc;
+        if (_pauseControl) { _pauseControl.winControl = wc; }
+    }
+    public void SetPauseControl(PauseControl pc)
+    {
+        _pauseControl = pc;
+        if (_winControl) { pc.winControl = _winControl; }
+    }
     public void AddRopeController(RopeController rc) { _ropeControllers.Add(rc); }
     public void SetPlayerController(PlayerController pc) { _playerController = pc; }
 

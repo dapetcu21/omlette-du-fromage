@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class PauseControl : MonoBehaviour
 {
     public Animator animator;
+    public WinControl winControl { get; set; }
 
     void Start()
     {
@@ -19,12 +20,14 @@ public class PauseControl : MonoBehaviour
     public void ShowPanel()
     {
         animator.SetTrigger("PopUp");
+        winControl.gameObject.SetActive(false);
         _ResetButtons();
     }
 
     public void HidePanel()
     {
         animator.SetTrigger("PopDown");
+        winControl.gameObject.SetActive(true);
     }
 
     public void TogglePauseGame()
