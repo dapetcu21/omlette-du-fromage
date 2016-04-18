@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour {
     public void ResetPosition()
     {
         _rigidBody.position = _initialPosition;
+        transform.position = _initialPosition;
         _rigidBody.velocity = velocity;
         _died = false;
         Update();
