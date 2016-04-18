@@ -59,7 +59,6 @@ public class RopeController : MonoBehaviour {
         int count = gameSettings.ropeVertexCount;
         for (int i = 0; i < count; i++) {
             _animationDiff.Add(targetVertices[i].y - _vertices[i].y);
-	        print(_animationDiff[i]);
         }
     }
 

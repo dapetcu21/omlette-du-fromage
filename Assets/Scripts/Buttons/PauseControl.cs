@@ -4,6 +4,8 @@ using UnityEngine.EventSystems;
 
 public class PauseControl : MonoBehaviour
 {
+    public Animator animator;
+
     void Start()
     {
         GameplayManager.instance.SetPauseControl(this);
@@ -16,16 +18,16 @@ public class PauseControl : MonoBehaviour
 
     public void ShowPanel()
     {
-        GetComponent<Animator>().SetTrigger("PopUp");
+        animator.SetTrigger("PopUp");
         _ResetButtons();
     }
 
     public void HidePanel()
     {
-        GetComponent<Animator>().SetTrigger("PopDown");
+        animator.SetTrigger("PopDown");
     }
 
-    public void Resume()
+    public void ResumeGame()
     {
         HidePanel();
         GameplayManager.instance.Resume();
@@ -34,12 +36,14 @@ public class PauseControl : MonoBehaviour
     public void MainMenu()
     {
         HidePanel();
+        GameplayManager.instance.Resume();
         GameplayManager.instance.MainMenu();
     }
 
     public void Retry()
     {
         HidePanel();
+        GameplayManager.instance.Resume();
         GameplayManager.instance.ResetLevel();
     }
 }
