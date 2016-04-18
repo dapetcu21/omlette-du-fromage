@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour {
         {
             _awakened = true;
             _rigidBody.velocity = velocity;
+            _animator.SetTrigger("awake");
         }
     }
 
