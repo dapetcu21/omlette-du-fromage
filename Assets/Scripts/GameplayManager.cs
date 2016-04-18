@@ -74,12 +74,20 @@ public class GameplayManager : MonoBehaviour
     public void SetWinControl(WinControl wc)
     {
         _winControl = wc;
-        if (_pauseControl) { _pauseControl.winControl = wc; }
+        if (_pauseControl)
+        {
+            _pauseControl.winControl = _winControl;
+	        _winControl.pauseControl = _pauseControl;
+        }
     }
     public void SetPauseControl(PauseControl pc)
     {
         _pauseControl = pc;
-        if (_winControl) { pc.winControl = _winControl; }
+        if (_winControl)
+        {
+            _pauseControl.winControl = _winControl;
+            _winControl.pauseControl = _pauseControl;
+        }
     }
     public void AddRopeController(RopeController rc) { _ropeControllers.Add(rc); }
     public void SetPlayerController(PlayerController pc) { _playerController = pc; }
