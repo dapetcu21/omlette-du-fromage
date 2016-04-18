@@ -136,7 +136,7 @@ public class GameplayManager : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneTransition.TransitionToScene("MainMenu");
     }
 
     public void PlayerHitObstacle()
