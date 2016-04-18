@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
         _rigidBody = GetComponent<Rigidbody2D>();
         _animator = GetComponentInChildren<Animator>();
         _initialPosition = _rigidBody.position;
-		ResetPosition();
+        ResetPosition();
 
         _audioSource = GetComponent<AudioSource>();
     }
@@ -53,11 +53,10 @@ public class PlayerController : MonoBehaviour {
     {
         _rigidBody.position = _initialPosition;
         transform.position = _initialPosition;
+        _rigidBody.velocity = Vector2.zero;
         _awakened = false;
         _died = false;
-        _rigidBody.velocity = velocity;
-        Update();
-        _rigidBody.velocity = Vector2.zero;
+        _UpdateOrientation(velocity, true);
     }
 
     public void HitObstacle()
@@ -72,12 +71,8 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void Update()
+    void _UpdateOrientation(Vector2 vel, bool immediate)
     {
-        if (_died || !_awakened) { return; }
-
-        Vector2 vel = _rigidBody.velocity;
-
         Vector3 lastAxis;
         float lastAngle;
         transform.localRotation.ToAngleAxis(out lastAngle, out lastAxis);
@@ -85,7 +80,7 @@ public class PlayerController : MonoBehaviour {
 
         float angle = -Mathf.Atan2(vel.x, vel.y) * (180.0f / Mathf.PI) + 90.0f;
         angle = lastAngle + MathUtil.AngleShortDiff(angle - lastAngle);
-        float dampenedAngle = MathUtil.LowPassFilter(lastAngle, angle, Time.deltaTime, 3.0f);
+        float dampenedAngle = immediate ? angle : MathUtil.LowPassFilter(lastAngle, angle, Time.deltaTime, 3.0f);
 
         transform.localRotation = Quaternion.AngleAxis(dampenedAngle, Vector3.forward);
 
@@ -94,5 +89,16 @@ public class PlayerController : MonoBehaviour {
             Mathf.Abs(transform.localScale.y) * ((vel.x < 0) ? -1.0f : 1.0f),
             transform.localScale.z
         );
+    }
+
+    void Update()
+    {
+        if (_died || !_awakened) { return; }
+
+        _UpdateOrientation(_rigidBody.velocity, false);
+
+        if (_rigidBody.velocity.magnitude < GameplayManager.instance.gameSettings.minPlayerVelocity) {
+            GameplayManager.instance.Lose();
+        }
     }
 }

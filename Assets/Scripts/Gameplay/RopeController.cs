@@ -7,9 +7,15 @@ public class RopeController : MonoBehaviour
 
     private List<Vector2> _vertices;
 	private List<float> _animationDiff;
-	private bool _dirty;
+    private bool _dirty;
+    private bool _userInputEnabled;
 
-	public bool userInputEnabled { get; set; }
+    public bool userInputEnabled
+    {
+        get { return _userInputEnabled; }
+        set { _grabPoints.Clear(); _userInputEnabled = value; }
+    }
+
     public GameSettings.GameSettings gameSettings;
     public bool isTop = false;
     public List<Vector2> initialBumps = new List<Vector2>();
