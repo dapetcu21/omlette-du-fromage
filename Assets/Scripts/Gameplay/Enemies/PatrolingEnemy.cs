@@ -37,6 +37,10 @@ public class PatrolingEnemy : MonoBehaviour
         float velocity = (distance < 0.5f) ? distance * 2.0f * patrolSpeed : patrolSpeed;
         transform.position = position + dir * velocity * Time.deltaTime;
 
+        Vector3 scale = transform.localScale;
+        scale.x = dir.x <= 0 ? -1.0f : 1.0f;
+        transform.localScale = scale;
+
         if ((isPointA ? distanceA : distanceB) < 0.1f) { isPointA = !isPointA; }
     }
 }
