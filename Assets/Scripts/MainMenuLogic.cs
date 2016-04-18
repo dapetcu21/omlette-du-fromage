@@ -16,7 +16,6 @@ public class MainMenuLogic : MonoBehaviour
         {
             PlayerPrefs.SetString("lastLevel", "Level01");
         }
-        print(PlayerPrefs.GetString("lastLevel"));
         SceneTransition.TransitionToScene(PlayerPrefs.GetString("lastLevel"));
         MusicManager.instance.PlayGameMusic();
     }

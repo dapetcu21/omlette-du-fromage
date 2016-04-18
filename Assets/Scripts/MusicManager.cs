@@ -18,13 +18,13 @@ public class MusicManager : MonoBehaviour
 
     public void PlayMenuMusic()
     {
-        gameSource.Stop();
-        menuSource.Play();
+        gameSource.GetComponent<AudioFade>().FadeTo(0.0f, true);
+        menuSource.GetComponent<AudioFade>().FadeTo(1.0f, false);
     }
 
     public void PlayGameMusic()
     {
-        menuSource.Stop();
-        gameSource.Play();
+        menuSource.GetComponent<AudioFade>().FadeTo(0.0f, true);
+        gameSource.GetComponent<AudioFade>().FadeTo(1.0f, false);
     }
 }
