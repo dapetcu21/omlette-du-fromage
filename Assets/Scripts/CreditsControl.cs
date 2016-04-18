@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class CreditsControl : MonoBehaviour {
     public List<string> creditLines;
+    public string headText = "";
+    public string tailText = "";
 
     public bool shuffle = true;
 
     public Vector3 startPosition;
     public Vector3 endPosition;
     public float speed;
-    
+
     private Text text;
 
     void Start()
@@ -39,11 +41,13 @@ public class CreditsControl : MonoBehaviour {
         if(shuffle)
             creditLines.Sort((a, b) => 1 - 2 * Random.Range(0, 2));
 
-        text.text = "";
+        string s = headText.Length == 0 ? "" : (headText + "\n\n");
         foreach (string line in creditLines)
         {
-            text.text += line;
-            text.text += "\n";
+            s += line;
+            s += "\n";
         }
+        if (tailText.Length != 0) { s += "\n" + tailText; }
+        text.text = s;
     }
 }
