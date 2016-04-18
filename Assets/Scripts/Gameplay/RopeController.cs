@@ -29,6 +29,7 @@ public class RopeController : MonoBehaviour
 
     AudioSource _audioSource;
 
+    public Dictionary<int, Vector2> GetGrabPoints() { return _grabPoints; }
     public List<Vector2> GetVertices() { return _vertices; }
 	public bool GetDirty() { return _dirty; }
 
