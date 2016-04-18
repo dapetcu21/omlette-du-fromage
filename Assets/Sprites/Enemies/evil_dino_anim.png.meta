@@ -1,0 +1,640 @@
+fileFormatVersion: 2
+guid: 104f07b82677a4feabcf70e323598893
+timeCreated: 1461014803
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: evil_dino_anim_0
+    21300002: evil_dino_anim_1
+    21300004: evil_dino_anim_2
+    21300006: evil_dino_anim_3
+    21300008: evil_dino_anim_4
+    21300010: evil_dino_anim_5
+    21300012: evil_dino_anim_6
+    21300014: evil_dino_anim_7
+    21300016: evil_dino_anim_8
+    21300018: evil_dino_anim_9
+    21300020: evil_dino_anim_10
+    21300022: evil_dino_anim_11
+    21300024: evil_dino_anim_12
+    21300026: evil_dino_anim_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 140
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: evil_dino_anim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42, y: -39}
+        - {x: 39, y: -38}
+        - {x: 36, y: -38}
+        - {x: 32, y: -41}
+        - {x: 28, y: -45}
+        - {x: 35, y: -36}
+        - {x: 38, y: -38}
+        - {x: 42, y: -38}
+        - {x: 46, y: -41}
+        - {x: 48, y: -49}
+        - {x: 54, y: -51}
+        - {x: 83, y: -27}
+        - {x: 94, y: -2}
+        - {x: 94, y: 47}
+        - {x: 47, y: 89}
+        - {x: -113, y: 89}
+        - {x: -114, y: 88}
+        - {x: -114, y: -87}
+        - {x: 52, y: -87}
+        - {x: 58, y: -86}
+        - {x: 60, y: -62}
+        - {x: 48, y: -51}
+        - {x: 47, y: -47}
+    - name: evil_dino_anim_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 704
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: 66}
+        - {x: 7, y: 102}
+        - {x: -79, y: 102}
+        - {x: -96, y: 100}
+        - {x: -131, y: 70}
+        - {x: -154, y: 17}
+        - {x: -154, y: -67}
+        - {x: -133, y: -91}
+        - {x: 50, y: -91}
+        - {x: 59, y: -69}
+        - {x: 59, y: -42}
+        - {x: 50, y: -28}
+      - - {x: -4, y: -18}
+        - {x: -3, y: -21}
+        - {x: 1, y: -21}
+        - {x: 3, y: -19}
+        - {x: 2, y: -16}
+        - {x: -2, y: -16}
+    - name: evil_dino_anim_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 704
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: 66}
+        - {x: 7, y: 102}
+        - {x: -79, y: 102}
+        - {x: -96, y: 100}
+        - {x: -131, y: 70}
+        - {x: -154, y: 17}
+        - {x: -154, y: -67}
+        - {x: -133, y: -91}
+        - {x: 50, y: -91}
+        - {x: 59, y: -69}
+        - {x: 59, y: -42}
+        - {x: 50, y: -28}
+      - - {x: -4, y: -18}
+        - {x: -3, y: -21}
+        - {x: 1, y: -21}
+        - {x: 3, y: -19}
+        - {x: 2, y: -16}
+        - {x: -2, y: -16}
+    - name: evil_dino_anim_3
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 704
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: 66}
+        - {x: 7, y: 102}
+        - {x: -79, y: 102}
+        - {x: -96, y: 100}
+        - {x: -131, y: 70}
+        - {x: -154, y: 17}
+        - {x: -154, y: -67}
+        - {x: -133, y: -91}
+        - {x: 50, y: -91}
+        - {x: 59, y: -69}
+        - {x: 59, y: -42}
+        - {x: 50, y: -28}
+      - - {x: -4, y: -18}
+        - {x: -3, y: -21}
+        - {x: 1, y: -21}
+        - {x: 3, y: -19}
+        - {x: 2, y: -16}
+        - {x: -2, y: -16}
+    - name: evil_dino_anim_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 704
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: -28}
+        - {x: 23, y: -32}
+        - {x: 4, y: -23}
+        - {x: -8, y: -27}
+        - {x: -12, y: -20}
+        - {x: -1, y: -11}
+        - {x: 6, y: -3}
+        - {x: -6, y: 10}
+        - {x: 13, y: -9}
+        - {x: 2, y: -9}
+        - {x: -5, y: -17}
+        - {x: -3, y: -23}
+        - {x: 8, y: -22}
+        - {x: 18, y: -28}
+        - {x: 26, y: -29}
+        - {x: 27, y: -28}
+        - {x: 29, y: -28}
+        - {x: 34, y: -24}
+        - {x: 54, y: -31}
+        - {x: 76, y: -25}
+        - {x: 76, y: -9}
+        - {x: 64, y: 15}
+        - {x: 42, y: 50}
+        - {x: 2, y: 102}
+        - {x: -97, y: 102}
+        - {x: -126, y: 97}
+        - {x: -154, y: -25}
+        - {x: -154, y: -77}
+        - {x: -122, y: -89}
+        - {x: -76, y: -91}
+        - {x: 56, y: -91}
+        - {x: 65, y: -32}
+        - {x: 48, y: -30}
+        - {x: 39, y: -28}
+    - name: evil_dino_anim_5
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 704
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -108, y: 102}
+        - {x: -112, y: 101}
+        - {x: -154, y: -7}
+        - {x: -154, y: -75}
+        - {x: -112, y: -91}
+        - {x: 54, y: -91}
+        - {x: 58, y: -71}
+        - {x: 58, y: 14}
+        - {x: 20, y: 102}
+      - - {x: 102, y: -6}
+        - {x: 94, y: -1}
+        - {x: 89, y: 0}
+        - {x: 87, y: -2}
+        - {x: 87, y: -4}
+        - {x: 84, y: -4}
+        - {x: 93, y: 4}
+        - {x: 90, y: 23}
+        - {x: 68, y: 40}
+        - {x: 40, y: 40}
+        - {x: 27, y: 38}
+        - {x: 11, y: 16}
+        - {x: 5, y: 3}
+        - {x: 5, y: -21}
+        - {x: 16, y: -29}
+        - {x: 47, y: -29}
+        - {x: 51, y: -25}
+        - {x: 89, y: -27}
+        - {x: 102, y: -21}
+    - name: evil_dino_anim_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 124, y: -10}
+        - {x: 115, y: -3}
+        - {x: 110, y: -3}
+        - {x: 115, y: 4}
+        - {x: 111, y: 36}
+        - {x: 54, y: 55}
+        - {x: 26, y: 27}
+        - {x: 19, y: 17}
+        - {x: 23, y: 1}
+        - {x: 7, y: -20}
+        - {x: 7, y: -25}
+        - {x: 14, y: -27}
+        - {x: 6, y: -26}
+        - {x: -3, y: -24}
+        - {x: -6, y: -28}
+        - {x: 7, y: -3}
+        - {x: 21, y: 23}
+        - {x: 31, y: 34}
+        - {x: 36, y: 42}
+        - {x: 40, y: 50}
+        - {x: 4, y: 102}
+        - {x: -86, y: 102}
+        - {x: -110, y: 99}
+        - {x: -154, y: 53}
+        - {x: -154, y: -79}
+        - {x: -150, y: -91}
+        - {x: 60, y: -91}
+        - {x: 117, y: -39}
+        - {x: 125, y: -28}
+        - {x: 125, y: -14}
+    - name: evil_dino_anim_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 125, y: 2}
+        - {x: 119, y: 2}
+        - {x: 116, y: 1}
+        - {x: 116, y: -7}
+        - {x: 114, y: -2}
+        - {x: 119, y: 6}
+        - {x: 135, y: 14}
+        - {x: 135, y: 29}
+        - {x: 118, y: 58}
+        - {x: 64, y: 57}
+        - {x: 41, y: 44}
+        - {x: 28, y: 30}
+        - {x: 24, y: 21}
+        - {x: 24, y: 14}
+        - {x: 26, y: 6}
+        - {x: 14, y: -3}
+        - {x: 5, y: -23}
+        - {x: -3, y: -24}
+        - {x: -6, y: -28}
+        - {x: 7, y: -3}
+        - {x: 36, y: 42}
+        - {x: 40, y: 50}
+        - {x: 4, y: 102}
+        - {x: -86, y: 102}
+        - {x: -110, y: 99}
+        - {x: -154, y: 53}
+        - {x: -154, y: -78}
+        - {x: -150, y: -91}
+        - {x: 55, y: -91}
+        - {x: 130, y: -30}
+        - {x: 135, y: -19}
+        - {x: 135, y: -6}
+    - name: evil_dino_anim_8
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 159, y: -11}
+        - {x: 120, y: -9}
+        - {x: 112, y: -10}
+        - {x: 143, y: 4}
+        - {x: 154, y: 9}
+        - {x: 64, y: 131}
+        - {x: -118, y: 131}
+        - {x: -118, y: 7}
+        - {x: 8, y: -92}
+        - {x: 82, y: -76}
+        - {x: 87, y: -71}
+        - {x: 86, y: -68}
+        - {x: 101, y: -83}
+        - {x: 112, y: -92}
+        - {x: 115, y: -93}
+        - {x: 121, y: -93}
+        - {x: 131, y: -88}
+        - {x: 142, y: -84}
+        - {x: 159, y: -46}
+      - - {x: -93, y: -71}
+        - {x: -97, y: -71}
+        - {x: -98, y: -73}
+        - {x: -98, y: -77}
+        - {x: -96, y: -78}
+        - {x: -93, y: -78}
+        - {x: -91, y: -76}
+        - {x: -91, y: -72}
+      - - {x: -13, y: -66}
+        - {x: -16, y: -69}
+        - {x: -16, y: -74}
+        - {x: -15, y: -75}
+        - {x: -3, y: -75}
+        - {x: -2, y: -74}
+        - {x: -2, y: -69}
+        - {x: -6, y: -66}
+      - - {x: -33, y: -64}
+        - {x: -32, y: -67}
+        - {x: -28, y: -67}
+        - {x: -26, y: -65}
+        - {x: -27, y: -62}
+        - {x: -31, y: -62}
+    - name: evil_dino_anim_9
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 384
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 131}
+        - {x: -75, y: 131}
+        - {x: -105, y: 105}
+        - {x: -118, y: 78}
+        - {x: -118, y: 5}
+        - {x: -3, y: -82}
+        - {x: 74, y: -82}
+        - {x: 96, y: -30}
+        - {x: 96, y: 49}
+        - {x: 81, y: 68}
+      - - {x: -97, y: -71}
+        - {x: -98, y: -74}
+        - {x: -98, y: -77}
+        - {x: -96, y: -78}
+        - {x: -92, y: -78}
+        - {x: -91, y: -76}
+        - {x: -91, y: -72}
+        - {x: -93, y: -71}
+      - - {x: -13, y: -66}
+        - {x: -16, y: -69}
+        - {x: -16, y: -74}
+        - {x: -15, y: -75}
+        - {x: -3, y: -75}
+        - {x: -2, y: -74}
+        - {x: -2, y: -69}
+        - {x: -6, y: -66}
+      - - {x: 99, y: -68}
+        - {x: 97, y: -70}
+        - {x: 97, y: -73}
+        - {x: 99, y: -75}
+        - {x: 102, y: -75}
+        - {x: 104, y: -74}
+        - {x: 105, y: -70}
+        - {x: 103, y: -68}
+      - - {x: -33, y: -64}
+        - {x: -32, y: -67}
+        - {x: -28, y: -67}
+        - {x: -26, y: -65}
+        - {x: -27, y: -62}
+        - {x: -31, y: -62}
+    - name: evil_dino_anim_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 384
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -89, y: -99}
+        - {x: -89, y: -106}
+        - {x: -85, y: -106}
+        - {x: -82, y: -105}
+        - {x: -82, y: -100}
+        - {x: -84, y: -99}
+      - - {x: 2, y: 109}
+        - {x: -108, y: 109}
+        - {x: -136, y: 65}
+        - {x: -136, y: -25}
+        - {x: -24, y: -84}
+        - {x: 52, y: -84}
+        - {x: 82, y: -53}
+        - {x: 82, y: 40}
+        - {x: 78, y: 57}
+      - - {x: -9, y: -74}
+        - {x: -12, y: -77}
+        - {x: -12, y: -81}
+        - {x: -10, y: -82}
+        - {x: 3, y: -82}
+        - {x: 3, y: -76}
+        - {x: 0, y: -74}
+      - - {x: -26, y: -74}
+        - {x: -29, y: -77}
+        - {x: -28, y: -80}
+        - {x: -24, y: -80}
+        - {x: -22, y: -79}
+        - {x: -22, y: -76}
+        - {x: -23, y: -74}
+      - - {x: 105, y: -49}
+        - {x: 101, y: -49}
+        - {x: 99, y: -52}
+        - {x: 99, y: -54}
+        - {x: 101, y: -56}
+        - {x: 105, y: -56}
+        - {x: 107, y: -54}
+        - {x: 107, y: -50}
+    - name: evil_dino_anim_11
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 384
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: -97}
+        - {x: -11, y: -103}
+        - {x: -5, y: -103}
+        - {x: -5, y: -99}
+        - {x: -6, y: -97}
+      - - {x: 7, y: -91}
+        - {x: 5, y: -93}
+        - {x: 5, y: -97}
+        - {x: 6, y: -99}
+        - {x: 10, y: -99}
+        - {x: 17, y: -97}
+        - {x: 20, y: -94}
+        - {x: 20, y: -91}
+      - - {x: 52, y: 55}
+        - {x: -1, y: 64}
+        - {x: -133, y: 64}
+        - {x: -151, y: 29}
+        - {x: -151, y: -54}
+        - {x: -146, y: -81}
+        - {x: -53, y: -93}
+        - {x: 50, y: -93}
+        - {x: 72, y: -68}
+        - {x: 75, y: -60}
+        - {x: 75, y: 11}
+      - - {x: 107, y: -34}
+        - {x: 103, y: -34}
+        - {x: 102, y: -35}
+        - {x: 102, y: -40}
+        - {x: 103, y: -41}
+        - {x: 107, y: -41}
+        - {x: 109, y: -39}
+        - {x: 109, y: -35}
+    - name: evil_dino_anim_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: -97}
+        - {x: -11, y: -103}
+        - {x: -5, y: -103}
+        - {x: -5, y: -99}
+        - {x: -6, y: -97}
+      - - {x: 7, y: -91}
+        - {x: 5, y: -93}
+        - {x: 5, y: -97}
+        - {x: 6, y: -99}
+        - {x: 10, y: -99}
+        - {x: 17, y: -97}
+        - {x: 20, y: -94}
+        - {x: 20, y: -91}
+      - - {x: 52, y: 55}
+        - {x: -1, y: 64}
+        - {x: -133, y: 64}
+        - {x: -151, y: 29}
+        - {x: -151, y: -54}
+        - {x: -146, y: -81}
+        - {x: -53, y: -93}
+        - {x: 50, y: -93}
+        - {x: 72, y: -68}
+        - {x: 75, y: -60}
+        - {x: 75, y: 11}
+      - - {x: 107, y: -34}
+        - {x: 103, y: -34}
+        - {x: 102, y: -35}
+        - {x: 102, y: -40}
+        - {x: 103, y: -41}
+        - {x: 107, y: -41}
+        - {x: 109, y: -39}
+        - {x: 109, y: -35}
+    - name: evil_dino_anim_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: -97}
+        - {x: -11, y: -103}
+        - {x: -5, y: -103}
+        - {x: -5, y: -99}
+        - {x: -6, y: -97}
+      - - {x: 7, y: -91}
+        - {x: 5, y: -93}
+        - {x: 5, y: -97}
+        - {x: 6, y: -99}
+        - {x: 10, y: -99}
+        - {x: 17, y: -97}
+        - {x: 20, y: -94}
+        - {x: 20, y: -91}
+      - - {x: 52, y: 55}
+        - {x: -1, y: 64}
+        - {x: -133, y: 64}
+        - {x: -151, y: 29}
+        - {x: -151, y: -54}
+        - {x: -146, y: -81}
+        - {x: -53, y: -93}
+        - {x: 50, y: -93}
+        - {x: 72, y: -68}
+        - {x: 75, y: -60}
+        - {x: 75, y: 11}
+      - - {x: 107, y: -34}
+        - {x: 103, y: -34}
+        - {x: 102, y: -35}
+        - {x: 102, y: -40}
+        - {x: 103, y: -41}
+        - {x: 107, y: -41}
+        - {x: 109, y: -39}
+        - {x: 109, y: -35}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
