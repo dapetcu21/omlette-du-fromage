@@ -740,6 +740,18 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 22493578, guid: d6f99eb144596b7478511cba1a1fd631, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22493578, guid: d6f99eb144596b7478511cba1a1fd631, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000030517578
+      objectReference: {fileID: 0}
+    - target: {fileID: 22409306, guid: d6f99eb144596b7478511cba1a1fd631, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6f99eb144596b7478511cba1a1fd631, type: 2}
   m_IsPrefabParent: 0
@@ -930,8 +942,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSettings: {fileID: 11473782, guid: d65b67556e5fae64f8b40f874729fe34, type: 2}
   player: {fileID: 0}
-  winPanel: {fileID: 0}
-  pausePanel: {fileID: 0}
   twoStarsTargetTime: 20
   threeStarsPercent: 80
   levelCount: 36
@@ -1108,19 +1118,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22424922, guid: 3cbb3ed05be83e14e8601bb14756f3ef, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 152.8357
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22424922, guid: 3cbb3ed05be83e14e8601bb14756f3ef, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -232.50002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22424922, guid: 3cbb3ed05be83e14e8601bb14756f3ef, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 250
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22424922, guid: 3cbb3ed05be83e14e8601bb14756f3ef, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22424922, guid: 3cbb3ed05be83e14e8601bb14756f3ef, type: 2}
       propertyPath: m_AnchorMin.x
@@ -1128,7 +1138,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22424922, guid: 3cbb3ed05be83e14e8601bb14756f3ef, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22424922, guid: 3cbb3ed05be83e14e8601bb14756f3ef, type: 2}
       propertyPath: m_AnchorMax.x
@@ -1136,7 +1146,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22424922, guid: 3cbb3ed05be83e14e8601bb14756f3ef, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22424922, guid: 3cbb3ed05be83e14e8601bb14756f3ef, type: 2}
       propertyPath: m_Pivot.x
