@@ -56,6 +56,10 @@ public class GameplayManager : MonoBehaviour
         _isPaused = false;
         Time.timeScale = 1.0f;
         startTime = Time.time;
+        string levelName = SceneManager.GetActiveScene().name;
+        if (levelName.StartsWith("Level")) {
+            PlayerPrefs.SetString("lastLevel", levelName);
+        }
     }
 
 	void Update () {

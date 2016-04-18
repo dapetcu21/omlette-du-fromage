@@ -14,7 +14,7 @@ public class LevelBrowserItem : MonoBehaviour {
     public Sprite lockedStar;
     public Sprite lockedLevel;
     public Sprite unlockedLevel;
-    
+
     private int _starCount = 0;
     private bool _isLocked = true;
     private int _levelIndex;
@@ -29,7 +29,7 @@ public class LevelBrowserItem : MonoBehaviour {
         _levelIndex = levelIndex;
         _starCount = starCount;
         _isLocked = isLocked;
-        
+
         levelText.text = "Level " + levelIndex;
 
         if (isLocked == true)
@@ -73,6 +73,7 @@ public class LevelBrowserItem : MonoBehaviour {
             levelIndexStr = _levelIndex.ToString();
         }
 
-        SceneManager.LoadScene("Level" + levelIndexStr);
+        MusicManager.instance.PlayGameMusic();
+        SceneTransition.TransitionToScene("Level" + levelIndexStr);
     }
 }
