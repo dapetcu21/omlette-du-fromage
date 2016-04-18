@@ -14,10 +14,14 @@ public class RopeController : MonoBehaviour
     public bool isTop = false;
     public List<Vector2> initialBumps = new List<Vector2>();
 
+    public List<AudioClip> pullEdgeSounds;
+
     Camera _gameCamera;
     bool _lastMouseState = false;
 
     Dictionary<int, Vector2> _grabPoints = new Dictionary<int, Vector2>();
+
+    AudioSource _audioSource;
 
     public List<Vector2> GetVertices() { return _vertices; }
 	public bool GetDirty() { return _dirty; }
@@ -30,6 +34,8 @@ public class RopeController : MonoBehaviour
         _ResetBumps();
         GameplayManager.instance.AddRopeController(this);
         Input.simulateMouseWithTouches = false;
+
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void _ResetBumps()
@@ -95,6 +101,9 @@ public class RopeController : MonoBehaviour
 
         if (grabbing) {
             _grabPoints[index] = grabStart;
+            //also play a sound
+            if (!_audioSource.isPlaying)
+                _audioSource.PlayOneShot(pullEdgeSounds[Random.Range(0, pullEdgeSounds.Count - 1)]);
         }
     }
 
