@@ -11,12 +11,7 @@ public class SceneTransition
         _sceneLoading = sceneLoading;
         _sceneLoading.allowSceneActivation = false;
 
-        GameObject[] gameObjects = SceneManager.GetActiveScene().GetRootGameObjects();
-        foreach (GameObject obj in gameObjects) {
-            if (obj.CompareTag("FadeBackground")) {
-                obj.GetComponent<FadeBackground>().StartFade(this);
-            }
-        }
+        GameObject.FindObjectOfType<FadeBackground>().StartFade(this);
     }
 
     public IEnumerator OnEndFade()

@@ -58,14 +58,12 @@ public class GameplayManager : MonoBehaviour
     }
 
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (_isPaused)
-                Resume();
-            else
-                Pause();
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+			_pauseControl.TogglePauseGame();
         }
     }
+
+    public bool IsPaused() { return _isPaused; }
 
     public void SetWinControl(WinControl wc)
     {
@@ -138,7 +136,7 @@ public class GameplayManager : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneTransition.TransitionToScene("MainMenu");
     }
 
     public void PlayerHitObstacle()
@@ -206,8 +204,6 @@ public class GameplayManager : MonoBehaviour
         {
             _levelStars[i] = PlayerPrefs.GetInt("LevelStar" + i);
         }
-
-        print("Unlocked count: " + _unlockedCount);
     }
 
     public void SaveProgress()

@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 public class MainMenuLogic : MonoBehaviour {
 
 	public void OnClick_Continue()
-	{
-        SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
-	}
+    {
+        SceneTransition.TransitionToScene(PlayerPrefs.GetString("currentLevel"));
+    }
 
     public void OnClick_Start()
     {
@@ -36,7 +36,7 @@ public class MainMenuLogic : MonoBehaviour {
         else
         {
             PlayerPrefs.SetString("currentLevel", "Level01");
-            SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
+            SceneTransition.TransitionToScene(PlayerPrefs.GetString("currentLevel"));
         }
     }
 
@@ -48,18 +48,18 @@ public class MainMenuLogic : MonoBehaviour {
     public void OnClick_Credits()
     {
         PlayerPrefs.SetString("currentLevel", "Credits");
-        SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
+        SceneTransition.TransitionToScene(PlayerPrefs.GetString("currentLevel"));
     }
 
     public void OnClick_CreditsBack()
     {
         PlayerPrefs.SetString("currentLevel", "MainMenu");
-        SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
+        SceneTransition.TransitionToScene(PlayerPrefs.GetString("currentLevel"));
     }
 
     public void OnClick_TutorialContinue()
     {
         PlayerPrefs.SetString("currentLevel", "Level01");
-        SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
+        SceneTransition.TransitionToScene(PlayerPrefs.GetString("currentLevel"));
     }
 }

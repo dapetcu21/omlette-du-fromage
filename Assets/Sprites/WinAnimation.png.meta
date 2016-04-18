@@ -1,0 +1,581 @@
+fileFormatVersion: 2
+guid: d111b5ee817954ce1b49ee75e2c8e408
+timeCreated: 1460984137
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: WinAnimation_0
+    21300002: WinAnimation_1
+    21300004: WinAnimation_2
+    21300006: WinAnimation_3
+    21300008: WinAnimation_4
+    21300010: WinAnimation_5
+    21300012: WinAnimation_6
+    21300014: WinAnimation_7
+    21300016: WinAnimation_8
+    21300018: WinAnimation_9
+    21300020: WinAnimation_10
+    21300022: WinAnimation_11
+    21300024: WinAnimation_12
+    21300026: WinAnimation_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: WinAnimation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1628
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 78, y: -46}
+        - {x: 67, y: -60}
+        - {x: 72, y: -48}
+        - {x: 79, y: -22}
+        - {x: 72, y: -8}
+        - {x: 71, y: -7}
+        - {x: -18, y: -7}
+        - {x: -94, y: -43}
+        - {x: -118, y: -119}
+        - {x: -118, y: -201}
+        - {x: -91, y: -209}
+        - {x: 8, y: -209}
+        - {x: 94, y: -192}
+        - {x: 102, y: -110}
+        - {x: 102, y: -47}
+        - {x: 88, y: -43}
+      - - {x: -32, y: -5}
+        - {x: -47, y: -26}
+        - {x: -47, y: -37}
+        - {x: -41, y: -43}
+        - {x: -27, y: -43}
+        - {x: -14, y: -38}
+        - {x: -11, y: -26}
+        - {x: -11, y: -6}
+        - {x: -13, y: -5}
+    - name: WinAnimation_1
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1628
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: -8}
+        - {x: -96, y: -69}
+        - {x: -128, y: -144}
+        - {x: -128, y: -207}
+        - {x: 64, y: -207}
+        - {x: 107, y: -195}
+        - {x: 107, y: -132}
+        - {x: 55, y: -8}
+      - - {x: 76, y: -31}
+        - {x: 64, y: -40}
+        - {x: 63, y: -48}
+        - {x: 63, y: -59}
+        - {x: 70, y: -64}
+        - {x: 83, y: -64}
+        - {x: 93, y: -53}
+        - {x: 93, y: -35}
+        - {x: 91, y: -31}
+      - - {x: -27, y: 17}
+        - {x: -41, y: -16}
+        - {x: -41, y: -31}
+        - {x: -38, y: -33}
+        - {x: -12, y: -33}
+        - {x: -12, y: 14}
+        - {x: -19, y: 17}
+    - name: WinAnimation_2
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1628
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -57, y: -83}
+        - {x: -137, y: -135}
+        - {x: -137, y: -210}
+        - {x: 123, y: -210}
+        - {x: 123, y: -125}
+        - {x: 92, y: -83}
+    - name: WinAnimation_3
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 1628
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: 75}
+        - {x: -48, y: 75}
+        - {x: -90, y: 37}
+        - {x: -90, y: -105}
+        - {x: -68, y: -171}
+        - {x: -28, y: -202}
+        - {x: 15, y: -202}
+        - {x: 55, y: -148}
+        - {x: 55, y: 31}
+        - {x: 43, y: 68}
+      - - {x: 47, y: -46}
+        - {x: 39, y: -50}
+        - {x: 39, y: -84}
+        - {x: 40, y: -95}
+        - {x: 43, y: -96}
+        - {x: 63, y: -96}
+        - {x: 65, y: -90}
+        - {x: 65, y: -58}
+        - {x: 56, y: -46}
+    - name: WinAnimation_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1208
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 111, y: 95}
+        - {x: 99, y: 125}
+        - {x: 66, y: 148}
+        - {x: 26, y: 151}
+        - {x: -23, y: 151}
+        - {x: -32, y: 150}
+        - {x: -96, y: 99}
+        - {x: -109, y: 86}
+        - {x: -126, y: 46}
+        - {x: -126, y: -23}
+        - {x: -125, y: -30}
+        - {x: -76, y: -65}
+        - {x: 22, y: -65}
+        - {x: 56, y: -28}
+        - {x: 100, y: 17}
+        - {x: 111, y: 47}
+      - - {x: 48, y: -30}
+        - {x: 45, y: -34}
+        - {x: 45, y: -38}
+        - {x: 46, y: -40}
+        - {x: 48, y: -40}
+        - {x: 54, y: -37}
+        - {x: 54, y: -32}
+        - {x: 52, y: -30}
+    - name: WinAnimation_5
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1208
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 80, y: 121}
+        - {x: 80, y: 165}
+        - {x: 47, y: 202}
+        - {x: 38, y: 205}
+        - {x: -6, y: 205}
+        - {x: -91, y: 143}
+        - {x: -126, y: 34}
+        - {x: -126, y: -32}
+        - {x: -122, y: -54}
+        - {x: -99, y: -82}
+        - {x: -67, y: -90}
+        - {x: 19, y: -90}
+        - {x: 53, y: -64}
+        - {x: 66, y: -16}
+        - {x: 68, y: 42}
+      - - {x: 48, y: -56}
+        - {x: 45, y: -60}
+        - {x: 45, y: -64}
+        - {x: 46, y: -66}
+        - {x: 48, y: -66}
+        - {x: 54, y: -63}
+        - {x: 54, y: -58}
+        - {x: 52, y: -56}
+      - - {x: 81, y: -1}
+        - {x: 83, y: -3}
+        - {x: 86, y: -2}
+        - {x: 86, y: 1}
+        - {x: 84, y: 3}
+        - {x: 81, y: 2}
+      - - {x: 71, y: 82}
+        - {x: 92, y: 82}
+        - {x: 102, y: 89}
+        - {x: 102, y: 116}
+        - {x: 99, y: 121}
+        - {x: 82, y: 121}
+        - {x: 63, y: 110}
+        - {x: 63, y: 89}
+      - - {x: -100, y: 148}
+        - {x: -70, y: 148}
+        - {x: -39, y: 171}
+        - {x: -39, y: 192}
+        - {x: -74, y: 192}
+        - {x: -91, y: 189}
+        - {x: -100, y: 174}
+    - name: WinAnimation_6
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1208
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 64, y: -35}
+        - {x: 101, y: 32}
+        - {x: 107, y: 53}
+        - {x: 107, y: 91}
+        - {x: 100, y: 96}
+        - {x: 39, y: 96}
+        - {x: 16, y: 93}
+        - {x: -59, y: 40}
+        - {x: -77, y: 9}
+        - {x: -109, y: -93}
+        - {x: -109, y: -158}
+        - {x: -86, y: -198}
+        - {x: -54, y: -203}
+        - {x: 36, y: -203}
+        - {x: 69, y: -178}
+        - {x: 82, y: -135}
+        - {x: 88, y: -81}
+      - - {x: 65, y: -169}
+        - {x: 62, y: -174}
+        - {x: 62, y: -178}
+        - {x: 64, y: -179}
+        - {x: 68, y: -179}
+        - {x: 71, y: -176}
+        - {x: 72, y: -171}
+        - {x: 70, y: -169}
+      - - {x: 99, y: -114}
+        - {x: 101, y: -116}
+        - {x: 104, y: -115}
+        - {x: 104, y: -112}
+        - {x: 102, y: -110}
+        - {x: 99, y: -111}
+      - - {x: -59, y: 154}
+        - {x: -91, y: 139}
+        - {x: -91, y: 112}
+        - {x: -87, y: 110}
+        - {x: -56, y: 110}
+        - {x: -29, y: 132}
+        - {x: -29, y: 154}
+    - name: WinAnimation_7
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 1208
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -128, y: -139}
+        - {x: -128, y: -190}
+        - {x: -115, y: -203}
+        - {x: -111, y: -206}
+        - {x: 107, y: -206}
+        - {x: 107, y: -18}
+        - {x: 106, y: -13}
+        - {x: 91, y: -8}
+        - {x: -9, y: -8}
+        - {x: -38, y: -26}
+      - - {x: -39, y: 84}
+        - {x: -59, y: 84}
+        - {x: -68, y: 69}
+        - {x: -68, y: 13}
+        - {x: -65, y: 2}
+        - {x: -51, y: 2}
+        - {x: -44, y: 7}
+        - {x: -40, y: 23}
+        - {x: -35, y: 49}
+        - {x: -35, y: 83}
+      - - {x: 100, y: 49}
+        - {x: 94, y: 41}
+        - {x: 91, y: 31}
+        - {x: 91, y: 21}
+        - {x: 95, y: 16}
+        - {x: 113, y: 16}
+        - {x: 122, y: 29}
+        - {x: 122, y: 47}
+        - {x: 116, y: 49}
+      - - {x: -32, y: 122}
+        - {x: -38, y: 113}
+        - {x: -39, y: 98}
+        - {x: -39, y: 87}
+        - {x: -36, y: 83}
+        - {x: -25, y: 83}
+        - {x: -19, y: 85}
+        - {x: -19, y: 120}
+        - {x: -24, y: 122}
+    - name: WinAnimation_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 788
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -57, y: -83}
+        - {x: -137, y: -135}
+        - {x: -137, y: -210}
+        - {x: 123, y: -210}
+        - {x: 123, y: -125}
+        - {x: 92, y: -83}
+    - name: WinAnimation_9
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 788
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 72, y: 27}
+        - {x: 8, y: 27}
+        - {x: -50, y: -13}
+        - {x: -105, y: -104}
+        - {x: -105, y: -163}
+        - {x: -79, y: -208}
+        - {x: 6, y: -208}
+        - {x: 34, y: -198}
+        - {x: 68, y: -174}
+        - {x: 88, y: -102}
+        - {x: 88, y: -5}
+      - - {x: -27, y: 29}
+        - {x: -42, y: 12}
+        - {x: -42, y: -9}
+        - {x: -37, y: -14}
+        - {x: -22, y: -14}
+        - {x: -14, y: -12}
+        - {x: -10, y: 7}
+        - {x: -10, y: 25}
+        - {x: -12, y: 29}
+    - name: WinAnimation_10
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 788
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 13}
+        - {x: -74, y: -46}
+        - {x: -110, y: -117}
+        - {x: -110, y: -165}
+        - {x: -103, y: -182}
+        - {x: -67, y: -209}
+        - {x: 5, y: -209}
+        - {x: 69, y: -191}
+        - {x: 69, y: 10}
+        - {x: 60, y: 13}
+      - - {x: 69, y: -29}
+        - {x: 59, y: -33}
+        - {x: 57, y: -43}
+        - {x: 57, y: -58}
+        - {x: 61, y: -63}
+        - {x: 79, y: -63}
+        - {x: 89, y: -51}
+        - {x: 89, y: -36}
+        - {x: 81, y: -29}
+      - - {x: -16, y: 18}
+        - {x: -28, y: 18}
+        - {x: -45, y: -4}
+        - {x: -45, y: -22}
+        - {x: -37, y: -26}
+        - {x: -26, y: -26}
+        - {x: -19, y: -19}
+        - {x: -12, y: 3}
+        - {x: -12, y: 13}
+    - name: WinAnimation_11
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 788
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 13}
+        - {x: -74, y: -46}
+        - {x: -110, y: -117}
+        - {x: -110, y: -165}
+        - {x: -103, y: -182}
+        - {x: -67, y: -209}
+        - {x: 5, y: -209}
+        - {x: 69, y: -191}
+        - {x: 69, y: 10}
+        - {x: 60, y: 13}
+      - - {x: 69, y: -29}
+        - {x: 59, y: -33}
+        - {x: 57, y: -43}
+        - {x: 57, y: -58}
+        - {x: 61, y: -63}
+        - {x: 79, y: -63}
+        - {x: 89, y: -51}
+        - {x: 89, y: -36}
+        - {x: 81, y: -29}
+      - - {x: -16, y: 18}
+        - {x: -28, y: 18}
+        - {x: -45, y: -4}
+        - {x: -45, y: -22}
+        - {x: -37, y: -26}
+        - {x: -26, y: -26}
+        - {x: -19, y: -19}
+        - {x: -12, y: 3}
+        - {x: -12, y: 13}
+    - name: WinAnimation_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 13}
+        - {x: -74, y: -46}
+        - {x: -110, y: -117}
+        - {x: -110, y: -165}
+        - {x: -103, y: -182}
+        - {x: -67, y: -209}
+        - {x: 5, y: -209}
+        - {x: 69, y: -191}
+        - {x: 69, y: 10}
+        - {x: 60, y: 13}
+      - - {x: 69, y: -29}
+        - {x: 59, y: -33}
+        - {x: 57, y: -43}
+        - {x: 57, y: -58}
+        - {x: 61, y: -63}
+        - {x: 79, y: -63}
+        - {x: 89, y: -51}
+        - {x: 89, y: -36}
+        - {x: 81, y: -29}
+      - - {x: -16, y: 18}
+        - {x: -28, y: 18}
+        - {x: -45, y: -4}
+        - {x: -45, y: -22}
+        - {x: -37, y: -26}
+        - {x: -26, y: -26}
+        - {x: -19, y: -19}
+        - {x: -12, y: 3}
+        - {x: -12, y: 13}
+    - name: WinAnimation_13
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 368
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 13}
+        - {x: -74, y: -46}
+        - {x: -110, y: -117}
+        - {x: -110, y: -165}
+        - {x: -103, y: -182}
+        - {x: -67, y: -209}
+        - {x: 5, y: -209}
+        - {x: 69, y: -191}
+        - {x: 69, y: 10}
+        - {x: 60, y: 13}
+      - - {x: 69, y: -29}
+        - {x: 59, y: -33}
+        - {x: 57, y: -43}
+        - {x: 57, y: -58}
+        - {x: 61, y: -63}
+        - {x: 79, y: -63}
+        - {x: 89, y: -51}
+        - {x: 89, y: -36}
+        - {x: 81, y: -29}
+      - - {x: -16, y: 18}
+        - {x: -28, y: 18}
+        - {x: -45, y: -4}
+        - {x: -45, y: -22}
+        - {x: -37, y: -26}
+        - {x: -26, y: -26}
+        - {x: -19, y: -19}
+        - {x: -12, y: 3}
+        - {x: -12, y: 13}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

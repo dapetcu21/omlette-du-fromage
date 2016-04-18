@@ -1,22 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour {
 
     public Vector2 velocity;
 
+    public List<AudioClip> hitSFX;
+
     Rigidbody2D _rigidBody;
     Animator _animator;
-    Vector2 initialPosition;
+    Vector2 _initialPosition;
     bool _died = false;
 
-    void Start()
+    AudioSource _audioSource;
+
+    void Awake()
     {
         GameplayManager.instance.player = gameObject;
         _rigidBody = GetComponent<Rigidbody2D>();
         _animator = GetComponentInChildren<Animator>();
-        initialPosition = _rigidBody.position;
+        _initialPosition = _rigidBody.position;
 		ResetPosition();
+
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public void Die()
@@ -34,14 +41,17 @@ public class PlayerController : MonoBehaviour {
 
     public void ResetPosition()
     {
-		_rigidBody.position = initialPosition;
-		_rigidBody.velocity = velocity;
+        _rigidBody.position = _initialPosition;
+        transform.position = _initialPosition;
+        _rigidBody.velocity = velocity;
         _died = false;
         Update();
     }
 
     public void HitObstacle()
     {
+        if(!_audioSource.isPlaying)
+            _audioSource.PlayOneShot(hitSFX[ Random.Range(0, hitSFX.Count-1) ]);
         Animator animator = GetComponentInChildren<Animator>();
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
             animator.SetTrigger("hurt");
@@ -49,7 +59,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Update()
-        {
+    {
         if (_died) { return; }
 
         Vector2 vel = _rigidBody.velocity;
