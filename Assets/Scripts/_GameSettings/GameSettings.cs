@@ -11,6 +11,7 @@ namespace GameSettings
         public bool 	firstTimeEnteringGame = true;
         public float 	staticEnemyWiggleAmount = 0.1f;
         public float 	staticEnemyWiggleSpeed = 1.0f;
+        public float 	ropeGrabTreshold = 0.1f;
         public Debug	debug;
 	}
 }

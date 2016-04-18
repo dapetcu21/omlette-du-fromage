@@ -46,6 +46,7 @@ MonoBehaviour:
   firstTimeEnteringGame: 1
   staticEnemyWiggleAmount: 0.1
   staticEnemyWiggleSpeed: 3
+  ropeGrabTreshold: 0.5
   debug: {fileID: 11436762, guid: f21263a25cc82f545a826219ce50aafe, type: 2}
 --- !u!1001 &100100000
 Prefab:
