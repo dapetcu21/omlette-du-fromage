@@ -23,6 +23,7 @@ public class LevelBrowser : MonoBehaviour {
         {
             currentItem = (GameObject)Instantiate(levelBrowserItem);
             currentItem.transform.SetParent(levelSelector.transform);
+            currentItem.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
             currentItem.GetComponent<LevelBrowserItem>().UpdateStars(_levelStars[i], (_unlockedCount > i) ? false : true, i+1);
         }
     }

@@ -1,14 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour {
 
     public Vector2 velocity;
 
+    public List<AudioClip> hitSFX;
+
     Rigidbody2D _rigidBody;
     Animator _animator;
     Vector2 _initialPosition;
     bool _died = false;
+
+    AudioSource _audioSource;
 
     void Awake()
     {
@@ -17,6 +22,8 @@ public class PlayerController : MonoBehaviour {
         _animator = GetComponentInChildren<Animator>();
         _initialPosition = _rigidBody.position;
 		ResetPosition();
+
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public void Die()
@@ -43,6 +50,8 @@ public class PlayerController : MonoBehaviour {
 
     public void HitObstacle()
     {
+        if(!_audioSource.isPlaying)
+            _audioSource.PlayOneShot(hitSFX[ Random.Range(0, hitSFX.Count-1) ]);
         Animator animator = GetComponentInChildren<Animator>();
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
             animator.SetTrigger("hurt");

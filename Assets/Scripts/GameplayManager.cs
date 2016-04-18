@@ -204,8 +204,6 @@ public class GameplayManager : MonoBehaviour
         {
             _levelStars[i] = PlayerPrefs.GetInt("LevelStar" + i);
         }
-
-        print("Unlocked count: " + _unlockedCount);
     }
 
     public void SaveProgress()
