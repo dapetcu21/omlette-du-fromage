@@ -29,6 +29,7 @@ GameObject:
   - 114: {fileID: 11406756}
   - 222: {fileID: 22288710}
   - 114: {fileID: 11474622}
+  - 114: {fileID: 11429988}
   m_Layer: 5
   m_Name: Level Browser
   m_TagString: Untagged
@@ -173,7 +174,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 11436532}
   m_HandleRect: {fileID: 22409306}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -208,6 +209,24 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11429988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b40db50ace0924d09b87967177b3b66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pagination: {fileID: 0}
+  NextButton: {fileID: 0}
+  PrevButton: {fileID: 0}
+  UseFastSwipe: 1
+  FastSwipeThreshold: 100
+  pageCount: 3
+  containerSize: 870
 --- !u!114 &11436532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -404,8 +423,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 143.05, y: -45}
-  m_SizeDelta: {x: 740, y: 438.5}
+  m_AnchoredPosition: {x: 93, y: -45}
+  m_SizeDelta: {x: 440, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22487704
 RectTransform:
