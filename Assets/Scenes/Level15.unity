@@ -270,6 +270,14 @@ Prefab:
       propertyPath: patrolSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11414742, guid: 50cc9db00f1644547985d7fe8c760808, type: 2}
+      propertyPath: patrolPointA.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414742, guid: 50cc9db00f1644547985d7fe8c760808, type: 2}
+      propertyPath: patrolPointB.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50cc9db00f1644547985d7fe8c760808, type: 2}
   m_IsPrefabParent: 0
@@ -571,6 +579,14 @@ Prefab:
     - target: {fileID: 11414742, guid: 50cc9db00f1644547985d7fe8c760808, type: 2}
       propertyPath: patrolSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414742, guid: 50cc9db00f1644547985d7fe8c760808, type: 2}
+      propertyPath: patrolPointA.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414742, guid: 50cc9db00f1644547985d7fe8c760808, type: 2}
+      propertyPath: patrolPointB.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50cc9db00f1644547985d7fe8c760808, type: 2}

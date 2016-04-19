@@ -34,7 +34,7 @@ public class PatrolingEnemy : MonoBehaviour
         float distanceB = (patrolPointB + _initialPosition - _position).magnitude;
         float distance = Mathf.Min(distanceA, distanceB);
 
-        float velocity = (distance < 0.5f) ? distance * 2.0f * patrolSpeed : patrolSpeed;
+        float velocity = (distance < 0.5f) ? Mathf.Max(distance, 0.1f) * 2.0f * patrolSpeed : patrolSpeed;
         transform.position = position + dir * velocity * Time.deltaTime;
 
         Vector3 scale = transform.localScale;
