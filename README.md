@@ -27,4 +27,4 @@ You can [play in your browser or download a build][builds] for Windows, Linux, O
 
 [builds]: https://omlettedufromage.itch.io/do-od
 [team]: http://ludumdare.com/compo/author/omlette-du-fromage/
-[ludum]: http://ludumdare.com/compo/ludum-dare-35/
+[ludum]: http://ludumdare.com/compo/ludum-dare-35/?action=preview&uid=92371
