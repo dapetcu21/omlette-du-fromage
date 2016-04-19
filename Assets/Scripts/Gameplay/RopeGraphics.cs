@@ -20,7 +20,7 @@ public class RopeGraphics : MonoBehaviour {
         //UpdateGraphics();
         UpdateLineGraphics();
     }
-	
+    
     void Update ()
     {
         if (ropeController.GetDirty())
@@ -28,7 +28,7 @@ public class RopeGraphics : MonoBehaviour {
             //UpdateGraphics();
             UpdateLineGraphics();
         }
-	}
+    }
 
     private void UpdateGraphics()
     {

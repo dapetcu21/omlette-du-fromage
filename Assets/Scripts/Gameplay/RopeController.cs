@@ -6,7 +6,7 @@ public class RopeController : MonoBehaviour
     const int MOUSE_INDEX = 28423250;
 
     private List<Vector2> _vertices;
-	private List<float> _animationDiff;
+    private List<float> _animationDiff;
     private bool _dirty;
     private bool _userInputEnabled;
 
@@ -31,12 +31,12 @@ public class RopeController : MonoBehaviour
 
     public Dictionary<int, Vector2> GetGrabPoints() { return _grabPoints; }
     public List<Vector2> GetVertices() { return _vertices; }
-	public bool GetDirty() { return _dirty; }
+    public bool GetDirty() { return _dirty; }
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         userInputEnabled = true;
-		_gameCamera = Camera.main;
+        _gameCamera = Camera.main;
         _vertices = new List<Vector2>();
         _ResetBumps();
         GameplayManager.instance.AddRopeController(this);
@@ -47,18 +47,18 @@ public class RopeController : MonoBehaviour
 
     void _ResetBumps()
     {
-		float cameraLeft = -_gameCamera.orthographicSize * Screen.width / Screen.height;
-		float cameraRight = -cameraLeft;
+        float cameraLeft = -_gameCamera.orthographicSize * Screen.width / Screen.height;
+        float cameraRight = -cameraLeft;
 
-		int count = gameSettings.ropeVertexCount;
+        int count = gameSettings.ropeVertexCount;
         float slice = (cameraRight - cameraLeft) / (count - 1);
 
-		for (int i = 0; i < count; i++) {
-			_vertices.Add(new Vector2(cameraLeft + slice * i, 0));
+        for (int i = 0; i < count; i++) {
+            _vertices.Add(new Vector2(cameraLeft + slice * i, 0));
         }
 
         foreach (Vector2 desc in initialBumps) {
-			BendRope(desc.x, desc.y);
+            BendRope(desc.x, desc.y);
         }
     }
 
@@ -85,25 +85,25 @@ public class RopeController : MonoBehaviour
         GameplayManager.instance.OnTouchDown();
 
         Vector2 grabStart = transform.InverseTransformPoint(_gameCamera.ScreenToWorldPoint(touch));
-		bool grabbing = false;
+        bool grabbing = false;
 
-		int count = _vertices.Count;
-		float grabX = grabStart.x;
-		float grabY = grabStart.y;
+        int count = _vertices.Count;
+        float grabX = grabStart.x;
+        float grabY = grabStart.y;
 
-		float cameraLeft = -_gameCamera.orthographicSize * Screen.width / Screen.height;
-		float cameraRight = -cameraLeft;
+        float cameraLeft = -_gameCamera.orthographicSize * Screen.width / Screen.height;
+        float cameraRight = -cameraLeft;
 
-		for (int i = 1; i < count; i++) {
-			if (_vertices[i - 1].x <= grabX && grabX < _vertices[i].x) {
-				float alpha = (grabX - _vertices[i - 1].x) / (_vertices[i].x - _vertices[i - 1].x);
+        for (int i = 1; i < count; i++) {
+            if (_vertices[i - 1].x <= grabX && grabX < _vertices[i].x) {
+                float alpha = (grabX - _vertices[i - 1].x) / (_vertices[i].x - _vertices[i - 1].x);
                 float y = _vertices[i - 1].y + alpha * (_vertices[i].y - _vertices[i - 1].y);
                 y += (isTop ? -1.0f : 1.0f) * gameSettings.ropeGrabTreshold;
                 if (isTop ^ (grabY <= y)) {
-					grabbing = true;
-				}
-				break;
-			}
+                    grabbing = true;
+                }
+                break;
+            }
         }
 
         if (grabbing) {
@@ -121,14 +121,14 @@ public class RopeController : MonoBehaviour
 
         Vector2 grabPoint = _grabPoints[index];
         Vector2 dragPoint = transform.InverseTransformPoint(_gameCamera.ScreenToWorldPoint(touch));
-		float deltaY = dragPoint.y - grabPoint.y;
+        float deltaY = dragPoint.y - grabPoint.y;
         grabPoint.y = dragPoint.y;
         _grabPoints[index] = grabPoint;
 
         BendRope(grabPoint.x, deltaY);
 
-		_dirty = true;
-	}
+        _dirty = true;
+    }
 
     void _OnTouchUp(int index)
     {
@@ -137,31 +137,31 @@ public class RopeController : MonoBehaviour
 
     public void BendRope(float positionX, float deltaY)
     {
-		int count = _vertices.Count;
-		float bumpHorizontalScale = gameSettings.bumpHorizontalScale;
+        int count = _vertices.Count;
+        float bumpHorizontalScale = gameSettings.bumpHorizontalScale;
 
-		for (int i = 0; i < count; i++) {
-			Vector2 vertex = _vertices[i];
-			float deltaX = (positionX - vertex.x);
-			float attenuation = Mathf.Exp(-deltaX * deltaX * bumpHorizontalScale);
-			vertex.y += deltaY * attenuation;
-			_vertices[i] = vertex;
-		}
+        for (int i = 0; i < count; i++) {
+            Vector2 vertex = _vertices[i];
+            float deltaX = (positionX - vertex.x);
+            float attenuation = Mathf.Exp(-deltaX * deltaX * bumpHorizontalScale);
+            vertex.y += deltaY * attenuation;
+            _vertices[i] = vertex;
+        }
     }
 
 
-	void FixedUpdate () {
-		_dirty = false;
+    void FixedUpdate () {
+        _dirty = false;
 
-		bool mouseState = Input.GetMouseButton(0);
-		if (_lastMouseState != mouseState) {
-			_lastMouseState = mouseState;
-			if (mouseState) {
+        bool mouseState = Input.GetMouseButton(0);
+        if (_lastMouseState != mouseState) {
+            _lastMouseState = mouseState;
+            if (mouseState) {
                 _OnTouchDown(MOUSE_INDEX, Input.mousePosition);
             } else {
-				_OnTouchUp(MOUSE_INDEX);
-			}
-		} else if (mouseState) {
+                _OnTouchUp(MOUSE_INDEX);
+            }
+        } else if (mouseState) {
             _OnTouchMove(MOUSE_INDEX, Input.mousePosition);
         }
 

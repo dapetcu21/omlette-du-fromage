@@ -18,15 +18,15 @@ public class RopePhysics : MonoBehaviour {
 
         _UpdateRopeVerticies();
     }
-	
-	void Update ()
+    
+    void Update ()
     {
         //update list of points
         if(ropeController.GetDirty())
         {
             _UpdateRopeVerticies();
         }
-	}
+    }
 
     private void _UpdateRopeVerticies()
     {

@@ -5,12 +5,12 @@ using System;
 
 public class GameplayManager : MonoBehaviour
 {
-	/************* singleton *************/
-	static public GameplayManager instance { get; private set; }
-	void Awake()
-	{
-		instance = this;
-		DatabaseManager.Initialize(gameSettings);
+    /************* singleton *************/
+    static public GameplayManager instance { get; private set; }
+    void Awake()
+    {
+        instance = this;
+        DatabaseManager.Initialize(gameSettings);
 
         //level progress logic
         _levelStars.Clear();
@@ -23,11 +23,11 @@ public class GameplayManager : MonoBehaviour
         //load the progress at start
         LoadProgress();
     }
-	/************* singleton *************/
+    /************* singleton *************/
 
 
-	public GameSettings.GameSettings gameSettings;
-	public GameObject player;
+    public GameSettings.GameSettings gameSettings;
+    public GameObject player;
 
     public float twoStarsTargetTime = 20.0f;
     public float threeStarsPercent = 80;
@@ -63,9 +63,9 @@ public class GameplayManager : MonoBehaviour
         }
     }
 
-	void Update () {
+    void Update () {
         if (Input.GetKeyDown(KeyCode.Escape)) {
-			_pauseControl.TogglePauseGame();
+            _pauseControl.TogglePauseGame();
         }
     }
 
@@ -77,7 +77,7 @@ public class GameplayManager : MonoBehaviour
         if (_pauseControl)
         {
             _pauseControl.winControl = _winControl;
-	        _winControl.pauseControl = _pauseControl;
+            _winControl.pauseControl = _pauseControl;
         }
     }
     public void SetPauseControl(PauseControl pc)
@@ -118,7 +118,7 @@ public class GameplayManager : MonoBehaviour
 
         //update and activate win panel
         _winControl.SetStars(GetStarCount());
-		_winControl.ShowPanel();
+        _winControl.ShowPanel();
     }
 
     public void Lose()
@@ -129,7 +129,7 @@ public class GameplayManager : MonoBehaviour
 
     public void ResetLevel(bool lose = false)
     {
-		_playerController.Die(lose);
+        _playerController.Die(lose);
         foreach (RopeController rc in _ropeControllers) {
             rc.userInputEnabled = false;
             rc.AnimateResetBumps();
@@ -149,7 +149,7 @@ public class GameplayManager : MonoBehaviour
     {
         int c = SceneManager.GetActiveScene().buildIndex;
         if (c < SceneManager.sceneCountInBuildSettings) {
-			SceneTransition.TransitionToScene(c + 1);
+            SceneTransition.TransitionToScene(c + 1);
         }
     }
 
@@ -211,7 +211,7 @@ public class GameplayManager : MonoBehaviour
 
     public void OnTouchDown()
     {
-		_playerController.AwakenPlayer();
+        _playerController.AwakenPlayer();
     }
 
     public void LoadProgress()

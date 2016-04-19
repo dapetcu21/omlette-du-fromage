@@ -15,7 +15,7 @@ public class MusicManager : MonoBehaviour
     {
         if (MusicManager.instance) { return; }
         MusicManager.instance = this;
-		DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     public void PlayMenuMusic()
