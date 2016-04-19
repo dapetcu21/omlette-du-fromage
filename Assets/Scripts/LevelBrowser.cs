@@ -29,7 +29,7 @@ public class LevelBrowser : MonoBehaviour {
                 currentItem.transform.SetParent(levelSelector.transform);
                 currentItem.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
                 computedIndex = 8 * pageIndex + i * 4 + k;
-                currentItem.GetComponent<LevelBrowserItem>().UpdateStars(_levelStars[i], (_unlockedCount > computedIndex) ? false : true, computedIndex + 1);
+                currentItem.GetComponent<LevelBrowserItem>().UpdateStars(_levelStars[computedIndex], (_unlockedCount > computedIndex) ? false : true, computedIndex + 1);
 
             }
         }        
