@@ -75,8 +75,8 @@ MonoBehaviour:
   headText: 
   tailText: Thank you for playing!
   shuffle: 1
-  startPosition: {x: 0, y: -550, z: 0}
-  endPosition: {x: 0, y: 550, z: 0}
+  startPosition: {x: 0, y: -650, z: 0}
+  endPosition: {x: 0, y: 650, z: 0}
   speed: 100
 --- !u!222 &22295184
 CanvasRenderer:
