@@ -17,6 +17,8 @@ This was built for [LudumDare 35][ludum] with the hearts and souls of team [Omle
 
 You can [play in your browser or download a build][builds] for Windows, Linux, OS X or Android on [itch.io][builds].
 
+The game is built in Unity, so you can also compile it from here.
+
 [alex]: https://github.com/aiafrasinei
 [marius]: http://petcu.me
 [stefan]: https://www.behance.net/arhifane
